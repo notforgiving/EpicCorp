@@ -1,0 +1,27 @@
+.white__link
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: -8px
+    border-radius: 2px
+    width: 100%
+    height: 0px
+    background-color: $accent
+    transition: 0.3s
+.white__link:hover::after
+  height: 3px
+
+.social-net
+  width: 35px
+  height: 35px
+  display: block
+  border-radius: 50%
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: 0px 3px
+  svg
+    width: 30px
+    height: 30px
