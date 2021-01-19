@@ -6,32 +6,20 @@ $textcolor: #ffffff // Text Color
 $lineheight: 1.65 // Document Line Height
 $userfont: Roboto, sans-serif // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
-$container: 1230px //width container
-// Bootstrap compatible gutter variable => $gutter
-// $grid-gutter-width: 30px
-// $gutter: $grid-gutter-width
+$container: 1220px //width container
 
-// IMPORT SECTION
-
-//@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
-//@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
-// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
-// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
-
-// FONTS LOAD SECTION
 
 @mixin font($fname, $fstyle, $fweight, $furl)
   @font-face
     font-family: $fname
     font-style: $fstyle
     font-weight: $fweight
-    src: local($fname), url($furl) format('woff2')
-		// font-display: swap // Uncomment to initially display system fonts
+    src: url($furl) format('woff')
 
-@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2')
-@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2')
-@include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2')
-@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+@include font('EuropeExt', normal, 700, '../fonts/EuropeExt-Bold.woff')
+@include font('RobotoCondensed', normal, 400, '../fonts/RobotoCondensed-Regular.woff')
+// @include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+// @include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
 
 // GENERAL DOCUMENT STYLES
 
@@ -74,6 +62,7 @@ button
   outline: none
   background: transparent
   border: none
+  padding: 0
 
 .container
   max-width: $container
