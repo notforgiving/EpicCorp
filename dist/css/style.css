@@ -797,6 +797,212 @@ button {
   width: 30%;
 }
 
+.faq {
+  padding-top: 57px;
+  padding-bottom: 115px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.faq__bread-crumbs {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 39px;
+}
+
+.bread-crumbs__link {
+  color: #bebebe;
+  position: relative;
+  padding-right: 2px;
+  margin-right: 10px;
+}
+
+.bread-crumbs__link:first-child {
+  color: #fff;
+}
+
+.bread-crumbs__link:last-child::after {
+  content: '';
+}
+
+.bread-crumbs__link::after {
+  position: absolute;
+  content: '/';
+  right: -10px;
+  top: -2px;
+}
+
+.faq-title {
+  font-size: 30px;
+}
+
+.faq__accordion-block {
+  list-style: none;
+  -webkit-perspective: 900px;
+          perspective: 900px;
+  padding: 0;
+  margin: 0;
+}
+
+.accordion-block__item {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  background-color: #282b30;
+  padding: 27px 50px 24px 29px;
+  min-width: 50%;
+  -webkit-animation: flipdown 0.5s ease both;
+          animation: flipdown 0.5s ease both;
+  color: #ffffff;
+  margin-bottom: 13px;
+}
+
+.accordion-block__item i {
+  position: absolute;
+  -webkit-transform: translate(-25px, 0);
+      -ms-transform: translate(-25px, 0);
+          transform: translate(-25px, 0);
+  margin-top: 0;
+  right: 0;
+}
+
+.accordion-block__item i:before,
+.accordion-block__item i:after {
+  content: "";
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  position: absolute;
+  background-color: #fff40c;
+  width: 1px;
+  height: 17px;
+}
+
+.accordion-block__item i:before {
+  -webkit-transform: translate(-6px, 0) rotate(45deg);
+      -ms-transform: translate(-6px, 0) rotate(45deg);
+          transform: translate(-6px, 0) rotate(45deg);
+}
+
+.accordion-block__item i:after {
+  -webkit-transform: translate(6px, 0) rotate(-45deg);
+      -ms-transform: translate(6px, 0) rotate(-45deg);
+          transform: translate(6px, 0) rotate(-45deg);
+}
+
+.accordion-block__item-checkbox {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+
+.accordion-block__item-checkbox:checked ~ p {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  -webkit-transform: translate(0, 50%);
+      -ms-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+}
+
+.accordion-block__item-checkbox:checked ~ i:before {
+  -webkit-transform: translate(-6px, 0) rotate(45deg);
+      -ms-transform: translate(-6px, 0) rotate(45deg);
+          transform: translate(-6px, 0) rotate(45deg);
+}
+
+.accordion-block__item-checkbox:checked ~ i:after {
+  -webkit-transform: translate(6px, 0) rotate(-45deg);
+      -ms-transform: translate(6px, 0) rotate(-45deg);
+          transform: translate(6px, 0) rotate(-45deg);
+}
+
+.accordion-block__item-title {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+}
+
+@-webkit-keyframes flipdown {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: rotateX(8deg);
+            transform: rotateX(8deg);
+  }
+
+  83% {
+    -webkit-transform: rotateX(6deg);
+            transform: rotateX(6deg);
+  }
+
+  92% {
+    -webkit-transform: rotateX(-3deg);
+            transform: rotateX(-3deg);
+  }
+
+  100% {
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: rotateX(8deg);
+            transform: rotateX(8deg);
+  }
+
+  83% {
+    -webkit-transform: rotateX(6deg);
+            transform: rotateX(6deg);
+  }
+
+  92% {
+    -webkit-transform: rotateX(-3deg);
+            transform: rotateX(-3deg);
+  }
+
+  100% {
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
 .footer {
   background-color: #fff40c;
   padding: 47px 0 54px 0;
