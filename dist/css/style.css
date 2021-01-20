@@ -1235,6 +1235,27 @@ button {
 }
 
 @media (max-width: 375px) {
+  .container {
+    max-width: 340px;
+    padding: 0 10px;
+  }
+
+  .enter-btn__img {
+    margin-right: 10px;
+  }
+
+  .information__search-btn {
+    margin-right: 10px;
+  }
+
+  .information__logo-img {
+    margin-right: 3px;
+  }
+
+  #menu_text_bar:before {
+    top: 7px;
+  }
+
   .not-found__title {
     font-size: 100px;
   }
