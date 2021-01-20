@@ -763,6 +763,9 @@ button {
 .not-found {
   padding: 8vw 0 10vw 0;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 
 .not-found__container {
