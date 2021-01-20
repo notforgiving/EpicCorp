@@ -24,10 +24,10 @@ try {
 /*Слайдер - баннер*/
 
 if (window.location.pathname === "/") {
-  slickState();
+  slickStart();
 }
 
-function slickState() {
+function slickStart() {
   $(".epic-slider").slick({
     dots: false,
     arrows: false,
