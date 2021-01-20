@@ -62,6 +62,11 @@ p {
   padding: 0;
 }
 
+html,
+body {
+  width: 320px;
+}
+
 a {
   text-decoration: none;
   color: #fff;
