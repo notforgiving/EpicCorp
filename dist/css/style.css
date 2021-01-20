@@ -1240,6 +1240,16 @@ button {
     padding: 0 10px;
   }
 
+  .social-net {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-net svg {
+    width: 18px;
+    height: 18px;
+  }
+
   .enter-btn__img {
     margin-right: 10px;
   }
@@ -1265,7 +1275,7 @@ button {
   }
 
   .footer__site-map {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .site-map__column,
@@ -1275,5 +1285,9 @@ button {
 
   .footer__top-img {
     width: 165px;
+  }
+
+  .social-net {
+    margin-left: 5px;
   }
 }
