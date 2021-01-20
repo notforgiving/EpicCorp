@@ -13,8 +13,12 @@
     display: flex
   &-social-nets__item
     background-color: #232426
+    transition: 0.3s
     svg
       fill: #fff
+    &:hover
+      background-color: #55585e
+
 .footer__site-map
   display: flex
   flex-wrap: wrap
@@ -26,6 +30,9 @@
 .site-map__column
   display: flex
   flex-direction: column
+  margin-right: 5px
+  &:last-child
+    margin-right: 0
   &-title
     font-size: 20px
     font-weight: 700
@@ -51,3 +58,56 @@
     flex-wrap: wrap
   &-img
     margin-left: 11px
+
+@media (max-width:1680px)
+
+@media (max-width:1440px)
+  .footer__site-map
+    font-size: 15px
+  .site-map__column-title
+    font-size: 18px
+  .footer__payment-copyrights
+    font-size: 14px
+  .footer__top
+    margin-bottom: 80px
+@media (max-width:1366px)
+  .footer__top
+    margin-bottom: 70px
+@media (max-width:1280px)
+  .footer__top
+    margin-bottom: 60px
+@media (max-width:1024px)
+  .footer__top
+    margin-bottom: 50px
+@media (max-width:960px)
+  .footer__top
+    margin-bottom: 40px
+@media (max-width:768px)
+  .footer__top
+    margin-bottom: 30px
+@media (max-width:576px)
+  .site-map__column
+    margin-bottom: 20px
+    min-width: 158px
+    margin-right: 10px
+  .footer__payment
+    flex-direction: column
+    align-items: flex-start
+    width: auto
+    min-width: 158px
+    margin-top: 0px
+    margin-right: 10px
+  .footer__payment-methods
+    width: 150px
+    justify-content: space-between
+  .footer__payment-img
+    margin-left: 0
+    margin-bottom: 13px
+  .footer__payment-copyrights
+    margin-bottom: 20px
+@media (max-width:420px)
+  .footer__top-img
+    width: 184px
+@media (max-width:375px)
+
+@media (max-width:320px)

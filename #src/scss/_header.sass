@@ -13,6 +13,7 @@
     display: flex
     align-items: center
 .information__logo-img
+  width: 229px
   margin-right: 62px
 .information__link
   margin-right: 42px
@@ -70,7 +71,7 @@
     align-items: center
   &__price
     color: #ffffff
-    font-size: 16px;
+    font-size: 16px
 .header__social
   display: flex
   justify-content: space-between
@@ -107,3 +108,139 @@
 
 .lowMargin
   margin-bottom: 27px
+
+#webapp_cover
+  display: none
+
+@media (max-width:1680px)
+
+@media (max-width:1440px)
+.header__top
+  font-size: 15px
+.enter-btn__text
+  font-size: 15px
+.basket-btn__price
+  font-size: 15px
+.header__social__link
+  font-size: 18px
+.header__menu
+  font-size: 15px
+.information__logo-img
+  width: 200px
+  margin-right: 55px
+@media (max-width:1366px)
+  .social-net
+    width: 35px
+    height: 35px
+    svg
+      width: 20px
+      height: 20px
+@media (max-width:1280px)
+  .menu-nav__link
+    margin-left: 35px
+@media (max-width:1024px)
+
+@media (max-width:960px)
+  .basket-btn__price
+    display: none
+@media (max-width:768px)
+  .information__link
+    display: none
+@media (max-width:576px)
+  .enter-btn__text
+    display: none
+  .information__logo-img
+    width: 186px
+    margin-right: 20px
+  .site__enter-btn
+    margin-right: 0
+  .information__search-btn
+    margin-right: 24px
+  .enter-btn__img
+    margin-right: 21px
+  .header__social__link
+    display: none
+  .header__mobile-menu
+    display: block
+  .header__menu
+    justify-content: flex-start;
+  .menu-nav__link
+    margin-left: 0
+    margin-right: 25px
+  #webapp_cover
+    width: 35px
+    display: block
+  #menu_button
+    width: 35px
+    overflow: hidden
+  #menu_checkbox
+    display: none
+  #menu_label
+    position: relative
+    display: block
+    height: 29px
+    cursor: pointer
+  #menu_label:before, #menu_label:after, #menu_text_bar
+    position: absolute
+    left: 0
+    width: 100%
+    height: 3px
+    background-color: $accent
+  #menu_label:before, #menu_label:after
+    content: ''
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) left
+  #menu_label:before
+    top: 0
+  #menu_label:after
+    top: 10px
+  #menu_text_bar
+    top: 20px
+  #menu_text_bar:before
+    content: 'FUNKO'
+    position: absolute
+    top: 5px
+    right: 0
+    left: 0
+    color: #fff
+    font-size: 10px
+    font-weight: bold
+    text-align: center
+  #menu_checkbox:checked + #menu_label:before
+    left: -39px
+  #menu_checkbox:checked + #menu_label:after
+    left: 39px
+  #menu_checkbox:checked + #menu_label #menu_text_bar:before
+    animation: moveUpThenDown 0.8s ease 0.2s forwards, shakeWhileMovingUp 0.8s ease 0.2s forwards, shakeWhileMovingDown 0.2s ease 0.8s forwards
+  @keyframes moveUpThenDown
+    0%
+      top: 0
+    50%
+      top: -24px
+    100%
+      top: -18px
+  // @keyframes shakeWhileMovingUp
+  //   0% 
+  //     transform: rotateZ(0)
+  //   25% 
+  //     transform:rotateZ(-10deg)
+  //   50% 
+  //     transform:rotateZ(0deg)
+  //   75% 
+  //     transform:rotateZ(10deg)
+  //   100% 
+  //     transform:rotateZ(0)
+  // @keyframes shakeWhileMovingDown
+  //   0% 
+  //     transform:rotateZ(0)
+  //   80% 
+  //     transform:rotateZ(3deg)
+  //   90% 
+  //     transform:rotateZ(-3deg)
+  //   100% 
+  //     transform:rotateZ(0)
+
+@media (max-width:420px)
+
+@media (max-width:375px)
+
+@media (max-width:320px)
