@@ -1259,4 +1259,17 @@ button {
   .not-found__title {
     font-size: 100px;
   }
+
+  .site-map__column-title {
+    font-size: 17px;
+  }
+
+  .footer__site-map {
+    font-size: 13px;
+  }
+
+  .site-map__column,
+  .footer__payment {
+    min-width: 150px;
+  }
 }
