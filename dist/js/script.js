@@ -20,14 +20,15 @@ try {
   });
 } catch {}
 
-if (window.location.pathname == "/") {
+  /*Слайдер - популярное*/
   /*Слайдер - баннер*/
+
+if (window.location.pathname === "/") {
+
   $(".epic-slider").slick({
     dots: false,
     arrows: false,
   });
-
-  // /*Слайдер - популярное*/
 
   $(".popular-category__slider").slick({
     dots: false,
