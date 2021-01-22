@@ -1,0 +1,166 @@
+.card
+  &-container
+  &-title
+    margin-bottom: 68px
+  &-item__block
+    display: flex
+    justify-content: space-between
+    margin-bottom: 43px
+  &-item__images
+    width: 166px
+  &-item__images-slider
+.images-slider__arrows
+  text-align: center
+  &:hover
+    cursor: pointer
+    svg
+      path
+        fill: #fff40c
+.vartical-arrow-top
+  margin-bottom: 27px
+.vartical-arrow-bottom
+  margin-top: 12px
+  transform: rotate(180deg)
+.images-slider__item
+  width: 100px
+  border-radius: 5px
+  background-color: #202022
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-bottom: 15px
+  width: 166px
+  padding: 7px 55px
+  &-img
+    height: 103px
+.card-item__main-img
+  border-radius: 5px
+  background-color: #202022
+  width: 460px
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  margin-left: 30px
+  margin-right: 30px
+.card-item__discount
+  border-radius: 3px
+  background-color: #ff004b
+  color: #ffffff
+  font-size: 22px
+  font-weight: 600
+  padding: 8px 12px
+  position: absolute
+  top: 30px
+  left: 20px
+.card-item__detail
+  flex: 1
+.card-item__description
+  border-radius: 5px
+  border-spacing: 0px
+  border-collapse: collapse
+  margin-bottom: 37px
+  td,th
+    margin: 0
+    padding: 7px 24px 7px 38px
+  tr:nth-of-type(odd)
+    background-color: #282b30
+.card-item__buy-card
+  display: flex
+  margin-bottom: 33px
+  align-items: flex-end
+  justify-content: space-between
+  padding-right: 20px
+.card-item__current-price
+  color: $accent
+  font-size: 40px
+  font-weight: 700
+  line-height: 1
+  margin-right: 17px
+.card-item__old-price
+  color: #929296
+  font-size: 25px
+  font-weight: 500
+  line-height: 1
+  text-decoration: line-through
+.card-item__quantity
+  height: 40px
+  width: 120px
+  background-color: #39393b
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  &-value
+  &-minus
+    left: -20px
+  &-btn
+    width: 40px
+    height: 40px
+    position: absolute
+    top: 50%
+    border-radius: 50%
+    transform: translateY(-50%)
+    background-color: #a6a6a7
+    transition: 0.2s
+    &:hover
+      background-color: $accent
+  &-number
+    color: #dadfe6
+    font-size: 14px
+    font-weight: 400
+  &-plus
+    right: -20px
+.card-item__in-basket
+.card-item-btn
+  color: #232426
+  font-size: 20px
+  font-weight: 500
+  padding: 12px 59px
+.card-item__description-card
+.card-item__label
+  border-radius: 25px
+  text-align: center
+  width: 200px
+  padding: 10px 30px 10px 20px
+.card-item__body
+.card-item__input:checked+.card-item__label+.card-item__body
+  padding: 30px 0px
+  font-size: 15px
+  font-weight: 400
+  line-height: 21px
+.card-item__label::before
+  right: 15%
+  transform: translateY(-50%) rotate(90deg)
+.card-item__input:checked+.card-item__label::before
+  transform: translateY(-50%) rotate(-90deg)
+
+.card-item__recomendation
+  width: 1060px
+  margin: 0 auto
+  margin-bottom: 99px
+  &-slider
+.recomendation-item
+  margin: 0 10px
+.recomendation-item:nth-of-type(4n)
+  margin: 0 10px
+
+.recomendation-slider__arrows
+  svg
+    width: 40px
+    height: auto
+  &:hover
+    cursor: pointer
+    svg
+      path
+        fill: #fff40c
+.recomendation-slider__arrow-left
+  position: absolute
+  top: 50%
+  left: -50px
+  transform: translateY(-50%) rotate(-90deg)
+.recomendation-slider__arrow-right
+  position: absolute
+  top: 50%
+  right: -50px
+  transform: translateY(-50%) rotate(90deg)
