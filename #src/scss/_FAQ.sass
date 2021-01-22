@@ -1,15 +1,22 @@
 .faq
-  padding-top: 57px
-  padding-bottom: 115px
   background-repeat: no-repeat
   background-position: center center
   background-size: contain
   &-container
+    position: relative
+    height: 100%
+    padding-top: 57px
+    padding-bottom: 115px
   &__bread-crumbs
     font-family: Roboto
     font-size: 15px
     font-weight: 400
     margin-bottom: 39px
+  &__back-img
+    position: absolute
+    right: 115px
+    bottom: 0
+    width: 25vw
 .bread-crumbs__link
   color: #bebebe
   position: relative
@@ -28,79 +35,84 @@
 .faq
   &-title
     font-size: 30px
+    margin-bottom: 51px
 
 .faq__accordion
-  &-block
-    list-style: none
-    perspective: 900px
-    padding: 0
-    margin: 0
-.accordion-block__item
-  position: relative
-  padding: 0
-  margin: 0
-  border-radius: 5px
-  background-color: #282b30
-  padding: 27px 50px 24px 29px
-  min-width: 50%
-  animation: flipdown 0.5s ease both
-  color: #ffffff
-  margin-bottom: 13px
-  i
-    position: absolute
-    transform: translate( -25px , 0 )
-    margin-top: 0
-    right: 0
-    &:before , &:after
-      content: ""
-      transition: all 0.25s ease-in-out
-      position: absolute
-      background-color: $accent
-      width: 1px
-      height: 17px
-    &:before
-      transform: translate( -6px , 0 ) rotate( 45deg )
-    &:after
-      transform: translate( 6px , 0 ) rotate( -45deg )
-  &-checkbox
-    position: absolute
+  width: 46%
+  &-label
     cursor: pointer
+    display: block
+    padding: 15px 30px 15px 20px
     width: 100%
-    height: 100%
-    z-index: 1
-    opacity: 0
-    &:checked
-      &~p
-        margin-top: 0
-        max-height: 0
-        opacity: 0
-        transform: translate( 0 , 50% )
-      &~i
-        &:before
-          transform: translate( -6px , 0 ) rotate( 45deg )
-        &:after
-          transform: translate( 6px , 0 ) rotate( -45deg )
-  &-title
+    color: #fff
+    border-radius: 5px
+    background-color: #282b30
+    box-sizing: border-box
+    z-index: 100
     font-size: 18px
-    font-weight: 400
-    font-style: normal
-    letter-spacing: normal
-    line-height: normal
-  &-text
+    transition: color .35s
+    position: relative
 
-@keyframes flipdown
-  0%
-    opacity: 0
-    transform-origin: top center
-    transform: rotateX(-90deg)
-  5%
-    opacity: 1
-  80%
-    transform: rotateX(8deg)
-  83%
-    transform: rotateX(6deg)
-  92%
-    transform: rotateX(-3deg)
-  100%
-    transform-origin: top center
-    transform: rotateX(0deg)
+    &::before
+      content: '\276F'
+      position: absolute
+      top: 50%
+      right: 5%
+      transform: translateY(-50%) rotate(0deg)
+    &:hover
+      color: #fff
+  &-input
+    display: none
+
+.faq__accordion-input:checked + .faq__accordion-label
+  color: $accent
+
+.faq__accordion-input:checked + .faq__accordion-label::before
+  transition: transform .35s
+  transform: translateY(-50%) rotate(90deg)
+.faq__accordion-input:checked + .faq__accordion-label + .faq__accordion-body
+  height: auto
+  padding: 30px 40px
+  font-size: 16px
+  font-weight: 400
+  line-height: 25px
+
+.faq__accordion-body
+  margin-bottom: 13px
+  width: calc(100% - 10px)
+  height: 0
+  transition: color 0.2s, padding 0.2s,height 0.2s
+  overflow: hidden
+  font-size: 16px
+
+@media (max-width:1680px)
+
+@media (max-width:1440px)
+
+@media (max-width:1366px)
+  .faq__back-img
+    width: 40vw
+@media (max-width:1280px)
+
+@media (max-width:1024px)
+  .faq__accordion-label
+    font-size: 15px
+  .faq__accordion-input:checked+.faq__accordion-label+.faq__accordion-body
+    font-size: 14px
+  .faq__accordion
+    width: 55%
+@media (max-width:960px)
+
+@media (max-width:768px)
+  .faq__accordion
+    width: 100%
+  .faq__back-img
+    z-index: -1
+@media (max-width:576px)
+
+@media (max-width:420px)
+  .faq-title
+    margin-bottom: 20px
+@media (max-width:375px)
+
+@media (max-width:320px)
