@@ -1,3 +1,10 @@
+/*Раскрытие поиска*/
+const search = document.querySelector(".information__search-btn");
+const searchInput = document.querySelector(".information__search-input");
+search.addEventListener("click", () => {
+  searchInput.classList.toggle("information__search-input-open");
+});
+
 /* Раскрытие меню */
 const headerMenu = document.querySelector(".header__menu");
 const visableMenu = document.querySelector(".header__social");
@@ -5,7 +12,7 @@ const menuBtn = document.querySelector("#menu-btn");
 const mobileMenu = document.querySelector("#menu_checkbox");
 
 try {
-  menuBtn.addEventListener("click", () => {
+  menuBtn.addEventListener("click", (e) => {
     headerMenu.classList.toggle("showFlex");
     visableMenu.classList.toggle("lowMargin");
     menuBtn.classList.toggle("yellowColor");

@@ -422,8 +422,35 @@ button {
           align-items: center;
 }
 
+.information__search-form {
+  position: relative;
+  margin-right: 5px;
+}
+
+.information__search-input {
+  border-radius: 20px;
+  background-color: #39393b;
+  border: none;
+  padding: 0;
+  height: 0;
+  color: #fff;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.information__search-input-open {
+  padding: 9px 150px 9px 30px;
+  height: auto;
+}
+
 .information__search-btn {
-  margin-right: 25px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .search__icon {
@@ -1204,6 +1231,155 @@ button {
           transform: translateY(-50%) rotate(90deg);
 }
 
+.catalog {
+  padding-bottom: 157px;
+}
+
+.catalog__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.catalog__filters {
+  width: 267px;
+}
+
+.catalog__figurines {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.catalog__figurines-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 51px;
+}
+
+.catalog__figurines-select {
+  border-radius: 22px;
+  background-color: #282b30;
+  padding: 16px 96px 14px 34px;
+  border: none;
+  outline: none;
+  color: #fff40c;
+}
+
+.catalog__figuries-items {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.catalog__figuries-items .card-item {
+  margin-right: 30px;
+}
+
+.catalog__figuries-items .card-item:nth-of-type(4n) {
+  margin-right: 30px;
+}
+
+.catalog__figuries-items .card-item:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.catalog__figurines-pages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.figurines-pages__cicle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #5c5c5f;
+  color: #ffffff94;
+  font-size: 20px;
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.figurines-pages__cicle:hover {
+  border: 1px solid #fff;
+  background-color: #fff40c;
+  color: #000;
+}
+
+.figurines-pages-number-avtive {
+  background-color: #fff40c;
+  color: #000;
+}
+
+.figurines-pages__numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.figurines-pages-number {
+  margin: 0 9px;
+}
+
+.figurines-pages__next {
+  margin-left: 35px;
+  border: 1px solid #ffffff;
+}
+
+.figurines-pages__next svg {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.figurines-pages__prev {
+  margin-right: 35px;
+  border: 1px solid #ffffff;
+}
+
+.figurines-pages__prev svg {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
 .footer {
   background-color: #fff40c;
   padding: 47px 0 54px 0;
@@ -1403,6 +1579,10 @@ button {
 }
 
 @media (max-width: 1024px) {
+  .information__search-input-open {
+    padding: 9px 40px 9px 18px;
+  }
+
   .not-found__title {
     font-size: 240px;
   }

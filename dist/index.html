@@ -24,24 +24,27 @@
             src="./img/logo.gif"
             alt="Логотип Epic Corp"
         /></a>
-        <a class="information__link white__link" href="404.html">Каталог</a
+        <a class="information__link white__link" href="catalog.html">Каталог</a
         ><a class="information__link white__link" href="404.html">Информация</a>
       </div>
       <div class="header__top__basket">
-        <button class="information__search-btn">
-          <svg
-            class="search__icon"
-            cenable-background="new 0 0 515.558 515.558"
-            height="512"
-            viewBox="0 0 515.558 515.558"
-            width="512"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="m378.344 332.78c25.37-34.645 40.545-77.2 40.545-123.333 0-115.484-93.961-209.445-209.445-209.445s-209.444 93.961-209.444 209.445 93.961 209.445 209.445 209.445c46.133 0 88.692-15.177 123.337-40.547l137.212 137.212 45.564-45.564c0-.001-137.214-137.213-137.214-137.213zm-168.899 21.667c-79.958 0-145-65.042-145-145s65.042-145 145-145 145 65.042 145 145-65.043 145-145 145z"
-            />
-          </svg>
-        </button>
+        <form class="information__search-form" action="#">
+          <input class="information__search-input" type="text" placeholder="Поиск по сайту...">
+          <button class="information__search-btn">
+            <svg
+              class="search__icon"
+              cenable-background="new 0 0 515.558 515.558"
+              height="512"
+              viewBox="0 0 515.558 515.558"
+              width="512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m378.344 332.78c25.37-34.645 40.545-77.2 40.545-123.333 0-115.484-93.961-209.445-209.445-209.445s-209.444 93.961-209.444 209.445 93.961 209.445 209.445 209.445c46.133 0 88.692-15.177 123.337-40.547l137.212 137.212 45.564-45.564c0-.001-137.214-137.213-137.214-137.213zm-168.899 21.667c-79.958 0-145-65.042-145-145s65.042-145 145-145 145 65.042 145 145-65.043 145-145 145z"
+              />
+            </svg>
+          </button>
+        </form>
         <button class="site__enter-btn">
           <svg
             class="enter-btn__img"
@@ -196,7 +199,7 @@
       <h1 class="epic-slider__information-title title">
         Коллекционные <br/>фигурки <span>Funko POP</span>
       </h1>
-      <button class="epic-slider__information-btn btn-main">
+      <button onclick="window.location.href='/catalog.html'" class="epic-slider__information-btn btn-main">
         Перейти в каталог
         <img
           class="epic-slider-btn__arrow"

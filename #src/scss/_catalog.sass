@@ -1,0 +1,73 @@
+.catalog
+  padding-bottom: 157px
+  &-container
+  &__body
+    display: flex
+  &__filters
+    width: 267px
+  &__figurines
+    flex: 1
+  &__figurines-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 51px
+  &__figurines-title
+  &__figurines-select
+    border-radius: 22px
+    background-color: #282b30
+    padding: 16px 96px 14px 34px
+    border: none
+    outline: none
+    color: #fff40c
+  &__figurines-options
+  &__figuries-items
+    flex-wrap: wrap
+    display: flex
+    justify-content: space-between
+    margin-bottom: 50px
+    .card-item
+      margin-right: 30px
+    .card-item:nth-of-type(4n)
+      margin-right: 30px
+    .card-item:nth-of-type(3n)
+      margin-right: 0
+  &__figurines-pages
+    display: flex
+    justify-content: center
+    align-items: center
+.figurines-pages__cicle
+  width: 45px
+  height: 45px
+  border-radius: 50%
+  border: 1px solid #5c5c5f
+  color: #ffffff94
+  font-size: 20px
+  font-weight: 300
+  display: flex
+  justify-content: center
+  align-items: center
+  transition: 0.3s
+  &:hover
+    border: 1px solid #fff
+    background-color: $accent
+    color: #000
+.figurines-pages-number-avtive
+  background-color: $accent
+  color: #000
+.figurines-pages__numbers
+  display: flex
+  justify-content: center
+  align-items: center
+.figurines-pages-number
+  margin: 0 9px
+.figurines-pages__next
+  margin-left: 35px
+  border: 1px solid #ffffff
+  svg
+    transform: rotate(90deg)
+.figurines-pages__prev
+  margin-right: 35px
+  border: 1px solid #ffffff
+  svg
+    transform: rotate(-90deg)
