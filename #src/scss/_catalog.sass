@@ -5,6 +5,26 @@
     display: flex
   &__filters
     width: 267px
+    margin-right: 29px
+    &-body
+      border-radius: 5px
+      background-color: #282b30
+      height: 100%
+      width: 100%
+      padding: 25px 12px 31px 19px
+      &__parameter
+        border-bottom: 1px solid #39393b
+        padding-bottom: 16px
+        margin-top: 15px
+        &:first-child
+          margin-top: 0
+    .information__search-form
+      margin-bottom: 51px
+    .information__search-input
+      width: 100%
+      z-index: 1
+      border-radius: 20px
+      background-color: #39393b
   &__figurines
     flex: 1
   &__figurines-header
@@ -13,14 +33,6 @@
     align-items: center
     margin-bottom: 51px
   &__figurines-title
-  &__figurines-select
-    border-radius: 22px
-    background-color: #282b30
-    padding: 16px 96px 14px 34px
-    border: none
-    outline: none
-    color: #fff40c
-  &__figurines-options
   &__figuries-items
     flex-wrap: wrap
     display: flex

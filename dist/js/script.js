@@ -1,10 +1,3 @@
-/*Раскрытие поиска*/
-const search = document.querySelector(".information__search-btn");
-const searchInput = document.querySelector(".information__search-input");
-search.addEventListener("click", () => {
-  searchInput.classList.toggle("information__search-input-open");
-});
-
 /* Раскрытие меню */
 const headerMenu = document.querySelector(".header__menu");
 const visableMenu = document.querySelector(".header__social");
@@ -25,7 +18,11 @@ try {
     visableMenu.classList.toggle("lowMargin");
     menuBtn.classList.toggle("yellowColor");
   });
-} catch {}
+} catch {
+  console.log(
+    "Возникла ошибка со скриптом мобильного меню. Приносим свои извинения за неудобства!"
+  );
+}
 
 if (window.location.pathname == "/") {
   /*Слайдер - баннер*/
@@ -71,4 +68,6 @@ if (window.location.pathname == "/") {
     nextArrow:
       '<div class="recomendation-slider__arrows"><svg class="recomendation-slider__arrow-right" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><g><g><path fill="#787677" d="M.307 8.582L7.088.294a.892.892 0 0 1 .763-.325c.281-.022.57.09.762.325l6.781 8.288a.893.893 0 0 1-1.381 1.13L7.85 2.182 1.688 9.713a.892.892 0 0 1-1.381-1.13z"/></g></g></svg></div>',
   });
+} else if (window.location.pathname == "/catalog.html") {
+
 }

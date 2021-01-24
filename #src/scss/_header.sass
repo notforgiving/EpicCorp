@@ -22,24 +22,39 @@
   justify-content: space-between
   align-items: center
 .information__search-form
-  position: relative
   margin-right: 5px
+  position: relative
+  height: 42px
 .information__search-input
+  height: 100%
+  width: 0
+  padding: 0 42px 0 15px
+  border: none
+  border-bottom: 2px solid transparent
+  outline: none
+  cursor: pointer
+  color: #fff
+  background: transparent
+  transition: .4s cubic-bezier(0, 0.8, 0, 1)
+  position: absolute
+  top: 0
+  right: 0
+  z-index: 4
+.information__search-input::placeholder
+  color: #ffffff60
+.information__search-input:focus
+  width: 300px
+  z-index: 1
   border-radius: 20px
   background-color: #39393b
-  border: none
-  padding: 0
-  height: 0
-  color: #fff
-  transition: 0.3s
-.information__search-input-open
-  padding: 9px 150px 9px 30px
-  height: auto
 .information__search-btn
+  height: 42px
+  width: 42px
   position: absolute
-  top: 50%
-  right: 20px
-  transform: translateY(-50%)
+  top: 0
+  z-index: 3
+  right: 0
+  cursor: pointer
 .search__icon
   fill: #fff40c
   width: 20px

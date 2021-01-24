@@ -28,7 +28,7 @@
         ><a class="information__link white__link" href="404.html">Информация</a>
       </div>
       <div class="header__top__basket">
-        <form class="information__search-form" action="#">
+        <form class="information__search-form">
           <input class="information__search-input" type="text" placeholder="Поиск по сайту...">
           <button class="information__search-btn">
             <svg
@@ -213,18 +213,169 @@
             </svg>
           </button>
         </form>
+        <form class="catalog__filters-body">
+          <div class="catalog__filters-body__parameter">
+            <input class="inp-cbx" id="stock" type="checkbox" />
+            <label class="cbx" for="stock"
+              ><span>
+                <svg width="12px" height="10px">
+                  <use xlink:href="#check"></use></svg></span
+              ><span>Акции</span></label
+            >
+          </div>
+          <div class="catalog__filters-body__parameter">
+            <input class="inp-cbx" id="novelty" type="checkbox" />
+            <label class="cbx" for="novelty"
+              ><span>
+                <svg width="12px" height="10px">
+                  <use xlink:href="#check"></use></svg></span
+              ><span>Новинки</span></label
+            >
+          </div>
+        </form>
       </div>
       <div class="catalog__figurines">
         <div class="catalog__figurines-header">
           <h1 class="catalog__figurines-title title">Кино и сериалы</h1>
-          <select class="catalog__figurines-select">
-            <option class="catalog__figurines-options">По популярности</option>
-            <option class="catalog__figurines-options">По цене</option>
-            <option class="catalog__figurines-options">По алфавиту</option>
-          </select>
+          <form class="catalog__select-box">
+            <div class="select-box__current" tabindex="0">
+              <div class="select-box__value">
+                <input
+                  class="select-box__input"
+                  type="radio"
+                  id="0"
+                  value="1"
+                  name="Ben"
+                  checked="checked"
+                />
+                <p class="select-box__input-text">
+                  По популярности&ensp;&uarr;
+                </p>
+              </div>
+              <div class="select-box__value">
+                <input
+                  class="select-box__input"
+                  type="radio"
+                  id="1"
+                  value="2"
+                  name="Ben"
+                />
+                <p class="select-box__input-text">
+                  По популярности&ensp;&darr;
+                </p>
+              </div>
+              <div class="select-box__value">
+                <input
+                  class="select-box__input"
+                  type="radio"
+                  id="2"
+                  value="3"
+                  name="Ben"
+                />
+                <p class="select-box__input-text">По цене&ensp;&uarr;</p>
+              </div>
+              <div class="select-box__value">
+                <input
+                  class="select-box__input"
+                  type="radio"
+                  id="3"
+                  value="4"
+                  name="Ben"
+                />
+                <p class="select-box__input-text">По цене&ensp;&darr;</p>
+              </div>
+              <div class="select-box__value">
+                <input
+                  class="select-box__input"
+                  type="radio"
+                  id="4"
+                  value="5"
+                  name="Ben"
+                />
+                <p class="select-box__input-text">От A до Z</p>
+              </div>
+              <div class="select-box__value">
+                <input
+                  class="select-box__input"
+                  type="radio"
+                  id="5"
+                  value="6"
+                  name="Ben"
+                />
+                <p class="select-box__input-text">От Z до A</p>
+              </div>
+              <div class="select-box__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="10"
+                  viewBox="0 0 16 10"
+                >
+                  <g>
+                    <g>
+                      <path
+                        fill="#787677"
+                        d="M.307 8.582L7.088.294a.892.892 0 0 1 .763-.325c.281-.022.57.09.762.325l6.781 8.288a.893.893 0 0 1-1.381 1.13L7.85 2.182 1.688 9.713a.892.892 0 0 1-1.381-1.13z"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <ul class="select-box__list">
+              <li>
+                <label
+                  class="select-box__option"
+                  for="0"
+                  aria-hidden="aria-hidden"
+                  >По популярности&ensp;&uarr;</label
+                >
+              </li>
+              <li>
+                <label
+                  class="select-box__option"
+                  for="1"
+                  aria-hidden="aria-hidden"
+                  >По популярности&ensp;&darr;</label
+                >
+              </li>
+              <li>
+                <label
+                  class="select-box__option"
+                  for="2"
+                  aria-hidden="aria-hidden"
+                  >По цене&ensp;&uarr;
+                </label>
+              </li>
+              <li>
+                <label
+                  class="select-box__option"
+                  for="3"
+                  aria-hidden="aria-hidden"
+                  >По цене&ensp;&darr;
+                </label>
+              </li>
+              <li>
+                <label
+                  class="select-box__option"
+                  for="4"
+                  aria-hidden="aria-hidden"
+                  >От A до Z</label
+                >
+              </li>
+              <li>
+                <label
+                  class="select-box__option"
+                  for="5"
+                  aria-hidden="aria-hidden"
+                  >От Z до A</label
+                >
+              </li>
+            </ul>
+          </form>
         </div>
         <div class="catalog__figuries-items">
-          <a class="card-item" href="#">
+          <a class="card-item" href="/card.html">
             <div class="card-item__img">
               <img
                 class="card-img"
@@ -240,7 +391,7 @@
             <div class="card__name">Веном - Веном Капитан Марвел, 12 см.</div>
             <button class="card-btn__buy btn-main">В корзину</button>
           </a>
-          <a class="card-item" href="#">
+          <a class="card-item" href="/card.html">
             <div class="card-item__img">
               <img
                 class="card-img"
@@ -256,7 +407,7 @@
             <div class="card__name">Веном - Веном Капитан Марвел, 12 см.</div>
             <button class="card-btn__buy btn-main">В корзину</button>
           </a>
-          <a class="card-item" href="#">
+          <a class="card-item" href="/card.html">
             <div class="card-item__img">
               <img
                 class="card-img"
@@ -272,7 +423,7 @@
             <div class="card__name">Веном - Веном Капитан Марвел, 12 см.</div>
             <button class="card-btn__buy btn-main">В корзину</button>
           </a>
-          <a class="card-item" href="#">
+          <a class="card-item" href="/card.html">
             <div class="card-item__img">
               <img
                 class="card-img"
@@ -288,7 +439,7 @@
             <div class="card__name">Веном - Веном Капитан Марвел, 12 см.</div>
             <button class="card-btn__buy btn-main">В корзину</button>
           </a>
-          <a class="card-item" href="#">
+          <a class="card-item" href="/card.html">
             <div class="card-item__img">
               <img
                 class="card-img"
@@ -304,7 +455,7 @@
             <div class="card__name">Веном - Веном Капитан Марвел, 12 см.</div>
             <button class="card-btn__buy btn-main">В корзину</button>
           </a>
-          <a class="card-item" href="#">
+          <a class="card-item" href="/card.html">
             <div class="card-item__img">
               <img
                 class="card-img"
@@ -320,7 +471,7 @@
             <div class="card__name">Веном - Веном Капитан Марвел, 12 см.</div>
             <button class="card-btn__buy btn-main">В корзину</button>
           </a>
-          <a class="card-item" href="#">
+          <a class="card-item" href="/card.html">
             <div class="card-item__img">
               <img
                 class="card-img"
@@ -336,7 +487,7 @@
             <div class="card__name">Веном - Веном Капитан Марвел, 12 см.</div>
             <button class="card-btn__buy btn-main">В корзину</button>
           </a>
-          <a class="card-item" href="#">
+          <a class="card-item" href="/card.html">
             <div class="card-item__img">
               <img
                 class="card-img"
@@ -352,7 +503,7 @@
             <div class="card__name">Веном - Веном Капитан Марвел, 12 см.</div>
             <button class="card-btn__buy btn-main">В корзину</button>
           </a>
-          <a class="card-item" href="#">
+          <a class="card-item" href="/card.html">
             <div class="card-item__img">
               <img
                 class="card-img"
@@ -368,7 +519,7 @@
             <div class="card__name">Веном - Веном Капитан Марвел, 12 см.</div>
             <button class="card-btn__buy btn-main">В корзину</button>
           </a>
-          <a class="card-item" href="#">
+          <a class="card-item" href="/card.html">
             <div class="card-item__img">
               <img
                 class="card-img"
@@ -384,7 +535,7 @@
             <div class="card__name">Веном - Веном Капитан Марвел, 12 см.</div>
             <button class="card-btn__buy btn-main">В корзину</button>
           </a>
-          <a class="card-item" href="#">
+          <a class="card-item" href="/card.html">
             <div class="card-item__img">
               <img
                 class="card-img"
@@ -400,7 +551,7 @@
             <div class="card__name">Веном - Веном Капитан Марвел, 12 см.</div>
             <button class="card-btn__buy btn-main">В корзину</button>
           </a>
-          <a class="card-item" href="#">
+          <a class="card-item" href="/card.html">
             <div class="card-item__img">
               <img
                 class="card-img"
@@ -476,6 +627,14 @@
     </div>
   </div>
 </section>
+
+<!--SVG Sprites-->
+<svg class="inline-svg">
+  <symbol id="check" viewbox="0 0 12 10">
+    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+  </symbol>
+</svg>
+
 
     <footer class="footer">
   <div class="footer__container container">
