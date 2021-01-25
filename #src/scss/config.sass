@@ -35,6 +35,32 @@ html,body,ul,li,h1,h2,h3,h4,h5,h6,p
 html,body
   min-width: 375px
 
+::-webkit-scrollbar-button
+  background-image: url('')
+  background-repeat: no-repeat
+  width: 6px
+  height: 0px
+
+::-webkit-scrollbar-track
+  background-color: #39393b
+
+::-webkit-scrollbar-thumb
+  -webkit-border-radius: 0px
+  border-radius: 0px
+  background-color: $accent
+
+::-webkit-scrollbar-thumb:hover
+  background-color: $accent
+
+::-webkit-resizer
+  background-image: url('')
+  background-repeat: no-repeat
+  width: 4px
+  height: 0px
+
+::-webkit-scrollbar
+  width: 4px
+
 a
   text-decoration: none
   color: #fff
@@ -93,5 +119,3 @@ button
     max-width: 340px
     padding: 0 10px
 @media (max-width:320px)
-
-

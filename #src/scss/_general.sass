@@ -207,7 +207,7 @@
           fill: #232426
       .select-box__input-text
         border-radius: 19px 19px 0px 0px
-        border-bottom: none
+        border-bottom: 1px solid #282b30
   &__icon
     position: absolute
     top: 50%
@@ -305,8 +305,8 @@
         transition-delay: .1s
         transform: translate(-50%,-50%) translate3d(0,0,0)
     &:last-child
-      padding-left: 8px
-      line-height: 18px
+      padding-left: 14px
+      line-height: 21px
   &:hover span:first-child
 
 .inp-cbx
@@ -337,6 +337,91 @@
 
   to
     transform: scaleY(0)
+
+.easy-basket-filter
+  width: 100%
+  position: relative
+  &-info
+    padding: 0
+    display: flex
+    width: 100%
+    justify-content: space-between
+    position: absolute
+    top: 10px
+    p
+      color: #fff
+      margin: 0
+      width: 40px
+      position: absolute
+      top: 0
+      &:last-child
+        right: -5px
+      &:first-child
+        left: -18px
+    input
+      width: inherit
+      border: none
+      font-size: 15px
+      color: #fff
+      font-weight: 400
+      width: inherit
+      background-color: transparent
+      text-align: center
+.iLower
+  display: inline-block
+.easy-basket-lower
+.iUpper
+  display: inline-block
+.easy-basket-upper
+.easy-basket-filter-range
+.lower
+.range
+  position: absolute
+  left: 0
+  top: 0
+.upper
+.fill
+  height: 4px
+  width: 100%
+  background-color: $accent
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 2
+input[type=range]
+  -webkit-appearance: none
+  width: 100%
+  margin: 0
+  background: transparent
+
+input[type=range]::-webkit-slider-thumb
+  -webkit-appearance: none
+  cursor: pointer
+  position: relative
+  z-index: 3
+
+input[type=range]:focus, input[type=text]:focus
+  outline: none
+
+input[type=range]::-webkit-slider-thumb
+  -webkit-appearance: none
+  height: 14px
+  width: 4px
+  box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.5)
+  background: $accent
+  cursor: pointer
+  margin-top: -5px
+
+input[type=range]::-webkit-slider-runnable-track
+  width: 100%
+  height: 3px
+  cursor: pointer
+  background: #39393b
+  border-radius: 1.3px
+
+input[type=range].lower::-webkit-slider-runnable-track
+  background: red
+
 @media (max-width:1680px)
 
 @media (max-width:1440px)

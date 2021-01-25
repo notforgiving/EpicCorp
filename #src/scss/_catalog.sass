@@ -9,7 +9,7 @@
     &-body
       border-radius: 5px
       background-color: #282b30
-      height: 100%
+      height: fit-content
       width: 100%
       padding: 25px 12px 31px 19px
       &__parameter
@@ -18,6 +18,23 @@
         margin-top: 15px
         &:first-child
           margin-top: 0
+      &__btn
+        &-apply
+          padding: 12px 74px
+          margin-top: 36px
+          color: #232426
+          font-size: 15px
+          font-weight: 700
+          width: 100%
+          margin-bottom: 15px
+        &-cancel
+          padding: 12px 74px
+          color: #606061
+          font-family: Roboto
+          font-size: 15px
+          font-weight: 500
+          text-transform: inherit
+          width: 100%
     .information__search-form
       margin-bottom: 51px
     .information__search-input
@@ -83,3 +100,68 @@
   border: 1px solid #ffffff
   svg
     transform: rotate(-90deg)
+
+.catalog__filters-body__range
+  margin-top: 20px
+.range-title
+  margin-bottom: 11px
+  font-size: 17px
+  font-weight: 400
+  padding-left: 28px
+.easy-basket-filter
+  height: 40px
+.filters-body__prices
+  display: flex
+  justify-content: space-between
+  align-items: center
+  input
+    border-radius: 14px
+    background-color: #39393b
+    padding: 7px 15px
+    width: 70px
+    border: none
+    color: #ffffff
+    font-size: 15px
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none
+    margin: 0
+
+.filters-body__accord-input
+  display: none
+  &:checked
+    + .filters-body__accord-label
+      color: $accent
+      margin-bottom: 15px
+      + .filters-body__accord-body
+          height: 500px
+          opacity: 1
+      .select-box__icon
+        transform: translateY(-50%) rotate(180deg)
+        border: 1px solid #fff40c
+        background-color: #fff40c
+
+.filters-body__accord-label
+  padding-left: 28px
+  position: relative
+  cursor: pointer
+  display: block
+  transition: 0.3s
+  margin-bottom: 0
+  .select-box__icon
+.filters-body__accord-body
+  height: 0
+  transition: 0.3s
+  opacity: 0
+  overflow-y: scroll
+  overflow-x: hidden
+  .cbx
+    margin-bottom: 9px
+    display: block
+    &:last-child
+      margin-bottom: 0
