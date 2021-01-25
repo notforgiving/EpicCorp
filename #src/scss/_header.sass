@@ -43,7 +43,7 @@
 .information__search-input::placeholder
   color: #ffffff60
 .information__search-input:focus
-  width: 300px
+  width: 30vw
   z-index: 1
   border-radius: 20px
   background-color: #39393b
@@ -174,6 +174,8 @@
 @media (max-width:768px)
   .information__link
     display: none
+  .information__search-input:focus
+    width: 23vw
 @media (max-width:576px)
   .enter-btn__text
     display: none
@@ -183,7 +185,8 @@
   .site__enter-btn
     margin-right: 0
   .information__search-btn
-    margin-right: 24px
+    margin-right: 0px
+    padding-top: 4px
   .enter-btn__img
     margin-right: 21px
   .header__social__link
@@ -254,8 +257,13 @@
     margin-right: 10px
   .information__search-btn
     margin-right: 10px
+    width: 15px
   .information__logo-img
     margin-right: 3px
+  .information__search-input:focus
+    width: 64vw
+    + .information__search-btn
+        width: 24px
   #menu_text_bar:before
     top: 7px
 @media (max-width:320px)
