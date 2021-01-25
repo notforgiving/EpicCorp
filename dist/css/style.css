@@ -1095,7 +1095,6 @@ input[type=range].lower::-webkit-slider-runnable-track {
 
 .epic-slider__slide-img {
   width: 100%;
-  height: 699px;
 }
 
 .epic-slider__information {
@@ -1942,7 +1941,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
 }
 
 .filters-body__accord-input:checked + .filters-body__accord-label + .filters-body__accord-body {
-  height: 500px;
+  max-height: 500px;
   opacity: 1;
 }
 
@@ -1966,7 +1965,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
 }
 
 .filters-body__accord-body {
-  height: 0;
+  max-height: 0;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -2183,8 +2182,24 @@ input[type=range].lower::-webkit-slider-runnable-track {
 }
 
 @media (max-width: 1024px) {
+  .btn-main {
+    padding: 22px 29px;
+  }
+
   .information__search-input-open {
     padding: 9px 40px 9px 18px;
+  }
+
+  .epic-slider__information-title {
+    font-size: 40px;
+  }
+
+  .epic-slider__information-btn {
+    margin-bottom: 45px;
+  }
+
+  .epic-slider__information-history {
+    margin-left: 180px;
   }
 
   .not-found__title {
@@ -2223,12 +2238,29 @@ input[type=range].lower::-webkit-slider-runnable-track {
 }
 
 @media (max-width: 768px) {
+  .btn-main {
+    padding: 15px 24px;
+    font-size: 15px;
+  }
+
   .information__link {
     display: none;
   }
 
   .information__search-input:focus {
     width: 23vw;
+  }
+
+  .epic-slider__information-title {
+    font-size: 32px;
+  }
+
+  .epic-slider__slide-img {
+    width: 126%;
+  }
+
+  .epic-slider__information-history {
+    margin-left: 25px;
   }
 
   .not-found__title {
@@ -2439,6 +2471,21 @@ input[type=range].lower::-webkit-slider-runnable-track {
   }
 }
 
+@media (max-width: 480px) {
+  .epic-slider__information-title {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+
+  .epic-slider__information-btn {
+    margin-bottom: 12px;
+  }
+
+  .epic-slider__information-history {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 420px) {
   .container {
     max-width: 375px;
@@ -2474,6 +2521,11 @@ input[type=range].lower::-webkit-slider-runnable-track {
     height: 18px;
   }
 
+  .btn-main {
+    padding: 8px 19px;
+    font-size: 12px;
+  }
+
   .enter-btn__img {
     margin-right: 10px;
   }
@@ -2497,6 +2549,11 @@ input[type=range].lower::-webkit-slider-runnable-track {
 
   #menu_text_bar:before {
     top: 7px;
+  }
+
+  .epic-slider__information-title {
+    font-size: 23px;
+    margin-bottom: 13px;
   }
 
   .not-found__title {
