@@ -5,19 +5,27 @@ const menuBtn = document.querySelector("#menu-btn");
 const mobileMenu = document.querySelector("#menu_checkbox");
 
 try {
-  menuBtn.addEventListener("click", (e) => {
-    headerMenu.classList.toggle("showFlex");
-    visableMenu.classList.toggle("lowMargin");
-    menuBtn.classList.toggle("yellowColor");
-  });
+  menuBtn.addEventListener(
+    "click",
+    (e) => {
+      headerMenu.classList.toggle("showFlex");
+      visableMenu.classList.toggle("lowMargin");
+      menuBtn.classList.toggle("yellowColor");
+    },
+    { passive: true }
+  );
 } catch {}
 
 try {
-  mobileMenu.addEventListener("click", () => {
-    headerMenu.classList.toggle("showFlex");
-    visableMenu.classList.toggle("lowMargin");
-    menuBtn.classList.toggle("yellowColor");
-  });
+  mobileMenu.addEventListener(
+    "click",
+    () => {
+      headerMenu.classList.toggle("showFlex");
+      visableMenu.classList.toggle("lowMargin");
+      menuBtn.classList.toggle("yellowColor");
+    },
+    { passive: true }
+  );
 } catch {
   console.log(
     "Возникла ошибка со скриптом мобильного меню. Приносим свои извинения за неудобства!"
@@ -73,10 +81,10 @@ if (window.location.pathname == "/") {
   jQuery(document).ready(function () {
     $(".upper").on("input", setFill);
     $(".lower").on("input", setFill);
-  
+
     var max = $(".upper").attr("max");
     var min = $(".lower").attr("min");
-  
+
     function setFill(evt) {
       var valUpper = $(".upper").val();
       var valLower = $(".lower").val();
@@ -85,12 +93,12 @@ if (window.location.pathname == "/") {
         valLower = valUpper;
         valUpper = trade;
       }
-  
+
       var width = (valUpper * 100) / max;
       var left = (valLower * 100) / max;
       $(".fill").css("left", "calc(" + left + "%)");
       $(".fill").css("width", width - left + "%");
-  
+
       // Update info
       if (parseInt(valLower) == min) {
         $(".easy-basket-lower").val("0");
@@ -104,7 +112,7 @@ if (window.location.pathname == "/") {
       }
       $(".histogram-list li").removeClass("ui-histogram-active");
     }
-  
+
     // изменяем диапазон цен вручную
     $(".easy-basket-filter-info p input").keyup(function () {
       var valUpper = $(".easy-basket-upper").val();
@@ -134,5 +142,4 @@ if (window.location.pathname == "/") {
       $(this).val(Math.floor(valUpper));
     });
   });
-  
 }
