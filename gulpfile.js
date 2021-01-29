@@ -41,6 +41,7 @@ let { dest, src }    = require("gulp"),
   ttf2woff           = require("gulp-ttf2woff"),
   fontgen            = require("gulp-ttf2woff"),
   gcmq 				       = require('gulp-group-css-media-queries');
+  webp               = require('gulp-webp');
 
 function browserSync(params) {
   browsersync.init({
@@ -107,6 +108,7 @@ function images() {
         },
       })
     )
+    .pipe(webp())
     .pipe(dest(path.build.img))
     .pipe(browsersync.stream());
 }
