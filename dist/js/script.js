@@ -64,7 +64,6 @@ if (window.location.pathname == "/") {
     const buttonNext = document.querySelector(".epic-slider__arrows-next");
     buttonNext.style.left =
       (window.innerWidth - container.clientWidth) / 2 + 260 + "px";
-    console.log(window.innerWidth - container.clientWidth);
   }
 
   sliderButtonPosition();
