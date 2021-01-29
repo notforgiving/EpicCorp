@@ -51,19 +51,36 @@ if (window.location.pathname == "/") {
   const sliderNumbers = document.createElement("div");
   sliderNumbers.classList.add("epic-slider__numbers");
   sliderNumbers.innerHTML =
-    '<span class="epic-slider__numbers-current"><span>0</span>1</span> - <span class="epic-slider__numbers-sum">05</span>';
+    '<span class="epic-slider__numbers-current"><span>0</span>0</span> - <span class="epic-slider__numbers-sum">00</span>';
   sliderBlock.prepend(sliderNumbers);
-  const container = document.querySelector('.container')
-  
-  // console.log((window.innerWidth-container.clientWidth)/2)
+  const container = document.querySelector(".container");
+
+  function sliderButtonPosition() {
+    const buttonPrev = document.querySelector(".epic-slider__arrows-prev");
+    buttonPrev.style.left =
+      ((window.innerWidth - container.clientWidth) / 2 + 10) + "px";
+    sliderNumbers.style.left =
+      (window.innerWidth - container.clientWidth) / 2 + 90 + "px";
+    const buttonNext = document.querySelector(".epic-slider__arrows-next");
+    buttonNext.style.left =
+      (window.innerWidth - container.clientWidth) / 2 + 260 + "px";
+    console.log(window.innerWidth - container.clientWidth);
+  }
+
+  sliderButtonPosition();
+
+  window.addEventListener("resize", () => {
+    sliderButtonPosition();
+  });
+
   /*Анимируем изменение счетчика*/
   setInterval(() => {
     const mainSlider = document.querySelector(".epic-slider");
     const active = mainSlider.querySelector(".slick-active");
     const totalSliders = mainSlider.querySelectorAll("[data-slick-index]");
     const clonesSlider = mainSlider.querySelectorAll(".slick-cloned");
-    let firstSlide = active.getAttribute("data-slick-index")
-    const totalRealSliders = totalSliders.length - clonesSlider.length
+    let firstSlide = active.getAttribute("data-slick-index");
+    const totalRealSliders = totalSliders.length - clonesSlider.length;
     firstSlide++;
     sliderNumbers.innerHTML = `<span class="epic-slider__numbers-current"><span>0</span>${firstSlide}</span> - <span class="epic-slider__numbers-sum">0${totalRealSliders}</span>`;
   }, 500);
