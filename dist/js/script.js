@@ -44,6 +44,14 @@ if (window.location.pathname == "/") {
       '<button class="epic-slider__arrows epic-slider__arrows-prev"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><g><g><path fill="#787677" d="M.307 8.582L7.088.294a.892.892 0 0 1 .763-.325c.281-.022.57.09.762.325l6.781 8.288a.893.893 0 0 1-1.381 1.13L7.85 2.182 1.688 9.713a.892.892 0 0 1-1.381-1.13z"></path></g></g></svg></button>',
     nextArrow:
       '<button class="epic-slider__arrows epic-slider__arrows-next"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><g><g><path fill="#787677" d="M.307 8.582L7.088.294a.892.892 0 0 1 .763-.325c.281-.022.57.09.762.325l6.781 8.288a.893.893 0 0 1-1.381 1.13L7.85 2.182 1.688 9.713a.892.892 0 0 1-1.381-1.13z"></path></g></g></svg></button>',
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          arrows: false,
+        },
+      },
+    ],
   });
 
   /*Добавляем счетчик слайдов*/
@@ -55,21 +63,26 @@ if (window.location.pathname == "/") {
   sliderBlock.prepend(sliderNumbers);
   const container = document.querySelector(".container");
 
-  function sliderButtonPosition() {
-    const buttonPrev = document.querySelector(".epic-slider__arrows-prev");
-    buttonPrev.style.left =
-      ((window.innerWidth - container.clientWidth) / 2 + 10) + "px";
-    sliderNumbers.style.left =
+  function sliderButtonPosition(width) {
+    if (width >= 768) {
+      const buttonPrev = document.querySelector(".epic-slider__arrows-prev");
+      buttonPrev.style.left =
+        (window.innerWidth - container.clientWidth) / 2 + 10 + "px";
+      const buttonNext = document.querySelector(".epic-slider__arrows-next");
+      buttonNext.style.left =
+        (window.innerWidth - container.clientWidth) / 2 + 260 + "px";
+    }
+    
+    if(width>=768){
+      sliderNumbers.style.left =
       (window.innerWidth - container.clientWidth) / 2 + 90 + "px";
-    const buttonNext = document.querySelector(".epic-slider__arrows-next");
-    buttonNext.style.left =
-      (window.innerWidth - container.clientWidth) / 2 + 260 + "px";
+    }
   }
 
-  sliderButtonPosition();
+  sliderButtonPosition(window.innerWidth);
 
   window.addEventListener("resize", () => {
-    sliderButtonPosition();
+    sliderButtonPosition(window.innerWidth);
   });
 
   /*Анимируем изменение счетчика*/
@@ -83,6 +96,7 @@ if (window.location.pathname == "/") {
     firstSlide++;
     sliderNumbers.innerHTML = `<span class="epic-slider__numbers-current"><span>0</span>${firstSlide}</span> - <span class="epic-slider__numbers-sum">0${totalRealSliders}</span>`;
   }, 500);
+
   /*Слайдер - популярное*/
   $(".popular-category__slider").slick({
     dots: false,

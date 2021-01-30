@@ -1,5 +1,5 @@
 .main
-  padding: 60px 0px 0 0px
+  padding: 55px 0px 0 0px
   &-container
   &-title
     font-size: 30px
@@ -11,6 +11,26 @@
     justify-content: center
     align-items: center
     margin-bottom: 50px
+  &__cards-items
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 75px
+    justify-content: space-between
+  &__add-cards
+    display: flex
+    justify-content: center
+    margin-bottom: 106px
+  &-subtitle
+    margin-bottom: 69px
+    text-align: center
+  &__popular-category
+    margin-bottom: 50px
+
+.popular-category__slider
+  display: flex
+  justify-content: center
+.add-cards__btn
+  padding: 21px 122px
 .filter-btn
   padding: 6px 25px
   border-radius: 16px
@@ -24,36 +44,12 @@
   &:hover
     color: #232426
     background-color: #f8f283
-.filter-btn-active
-  background-color: $accent
-  border: 1px solid $accent
-  font-size: 14px
-  font-weight: 400
-  color: #232426
-.main__cards-items
-  display: flex
-  flex-wrap: wrap
-  margin-bottom: 30px
-  justify-content: center
-  .card-item
-    margin-right: 20px
-    max-width: 250px
-    &:nth-of-type(4n)
-      margin-right: 0
-.main__add-cards
-  display: flex
-  justify-content: center
-  margin-bottom: 106px
-.add-cards__btn
-  padding: 21px 122px
-.main-subtitle
-  margin-bottom: 69px
-  text-align: center
-.main__popular-category
-  margin-bottom: 50px
-.popular-category__slider
-  display: flex
-  justify-content: center
+  &-active
+    background-color: $accent
+    border: 1px solid $accent
+    font-size: 14px
+    font-weight: 400
+    color: #232426
 .slider__card
   display: flex
   flex-direction: column
@@ -83,9 +79,9 @@
     margin-bottom: 9px
   &-btn
     font-size: 9px
-
-.slider__card:hover .slider__card-title
-  color: #232426
+  &:hover 
+    .slider__card-title
+      color: #232426
 
 .slick-initialized .slick-slide
   display: flex
@@ -103,6 +99,7 @@
     height: 285px
     background-repeat: no-repeat
     background-position: 0 0
+    background-size: cover
   &-title
     font-family: Roboto
     font-size: 22px
@@ -126,28 +123,14 @@
 @media (max-width:1280px)
 
 @media (max-width:1024px)
-  .main__cards-items
-    .card-item
-      &:nth-of-type(4n)
-        margin-right: 20px
-      &:nth-of-type(3n)
-        margin-right: 0
+
 @media (max-width:960px)
 
 @media (max-width:768px)
   .main__double-item
     background-position: center center
-  .main__cards-items
-    .card-item
-      &:nth-of-type(3n)
-        margin-right: 20px
-      &:nth-of-type(2n)
-        margin-right: 0
+
 @media (max-width:640px)
-  .epic-slider__numbers
-    opacity: 0
-  .epic-slider__arrows
-    opacity: 0
   .main__double
     flex-direction: column
     &-item
@@ -156,9 +139,28 @@
 @media (max-width:576px)
 
 @media (max-width:480px)
-  .main__cards-items .card-item
-    margin: 0
-    margin-bottom: 10px
-@media (max-width:375px)
 
+@media (max-width:375px)
+  .main
+    padding: 7px 0px 0px
+    &-title
+      font-size: 26px
+      line-height: 1.2
+    &__cards-items
+      margin-bottom: 55px
+    &__popular-category
+      margin-bottom: 30px
+    &__double
+      &-item
+        height: 181px
+        padding: 0px 137px 0px 15px
+        margin-bottom: 15px
+        &:nth-of-type(2)
+          margin-bottom: 45px
+      &-title
+        font-size: 15px
+      &-btn
+        padding: 10px 20px
+  .slider__card
+    width: 203px
 @media (max-width:320px)
