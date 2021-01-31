@@ -1,6 +1,5 @@
 .main
   padding: 55px 0px 0 0px
-  &-container
   &-title
     font-size: 30px
     font-weight: 700
@@ -25,31 +24,36 @@
     text-align: center
   &__popular-category
     margin-bottom: 50px
+  &__double
+    display: flex
+    justify-content: space-between
+    margin-bottom: 60px
+    &-item
+      display: flex
+      flex-direction: column
+      justify-content: center
+      padding: 0 37px 0 37px
+      width: 48%
+      height: 285px
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-size: cover
+    &-title
+      font-family: Roboto
+      font-size: 22px
+      font-weight: 700
+      margin-bottom: 20px
+    &-btn
+      font-family: Roboto
+      font-size: 14px
+      font-weight: 600
+      padding: 11px 29px
+      max-width: 159px
 
 .popular-category__slider
   display: flex
   justify-content: center
-.add-cards__btn
-  padding: 21px 122px
-.filter-btn
-  padding: 6px 25px
-  border-radius: 16px
-  border: 1px solid #545a64
-  color: #ffffff
-  font-family: Roboto
-  font-size: 14px
-  font-weight: 400
-  text-transform: uppercase
-  margin: 0 15px
-  &:hover
-    color: #232426
-    background-color: #f8f283
-  &-active
-    background-color: $accent
-    border: 1px solid $accent
-    font-size: 14px
-    font-weight: 400
-    color: #232426
+
 .slider__card
   display: flex
   flex-direction: column
@@ -57,7 +61,7 @@
   align-items: flex-start
   position: relative
   margin: 0 8px
-  padding: 31px 120px 26px 16px
+  padding: 31px 16px 26px 16px
   width: 195px
   height: 100px
   background-repeat: no-repeat
@@ -79,67 +83,80 @@
     margin-bottom: 9px
   &-btn
     font-size: 9px
-  &:hover 
+  &:hover
     .slider__card-title
-      color: #232426
+      color: $accent
 
 .slick-initialized .slick-slide
   display: flex
 
-.main__double
-  display: flex
-  justify-content: space-between
-  &-item
-    display: flex
-    flex-direction: column
-    justify-content: center
-    padding: 0 137px 0 37px
-    margin-bottom: 60px
-    width: 48%
-    height: 285px
-    background-repeat: no-repeat
-    background-position: 0 0
-    background-size: cover
-  &-title
-    font-family: Roboto
-    font-size: 22px
-    font-weight: 700
-    margin-bottom: 20px
-  &-btn
-    font-family: Roboto
-    font-size: 14px
-    font-weight: 600
-    padding: 7px 27px
-    max-width: 159px
-
 @media (max-width:1680px)
-
+  .main__double-item
+    height: 275px
+  .main__double-btn
+    padding: 12px 28px
 @media (max-width:1440px)
   .main__cards-items
     .card-btn__buy
       padding: 13px 56px
+  .main__double-item
+    height: 265px
+  .main__double-btn
+    padding: 12px 27px
 @media (max-width:1366px)
-
+  .main__double-item
+    height: 255px
+  .main__double-title
+    font-size: 21px
 @media (max-width:1280px)
-
+  .main__double-item
+    height: 245px
+  .main__double-btn
+    padding: 12px 26px
 @media (max-width:1024px)
-
+  .main__double-item
+    height: 235px
+  .main__double-title
+    font-size: 20px
 @media (max-width:960px)
-
+  .main__double-item
+    height: 225px
+  .main__double-title
+    font-size: 19px
 @media (max-width:768px)
   .main__double-item
     background-position: center center
-
+  .main__double-item
+    height: 215px
+  .main__double-title
+    font-size: 18px
+  .main__double-btn
+    padding: 11px 25px
 @media (max-width:640px)
+  .main__double
+    &-item
+      height: 205px
+      margin-bottom: 20px
+    &-title
+      font-size: 17px
+    &-btn
+      padding: 11px 24px
+@media (max-width:576px)
   .main__double
     flex-direction: column
     &-item
       width: 100%
-      margin-bottom: 20px
-@media (max-width:576px)
-
+  .main__double-item
+    height: 195px
+  .main__double-btn
+    padding: 11px 23px
 @media (max-width:480px)
-
+  .main__double-item
+    height: 185px
+  .main__double-title
+    font-size: 16px
+  .main__double-btn
+    padding: 11px 22px
 @media (max-width:375px)
   .main
     padding: 7px 0px 0px

@@ -35,7 +35,6 @@
 .btn-main
   border-radius: 31px
   background-color: $accent
-  padding: 23px 38px
   color: #232426
 
 .title
@@ -427,9 +426,11 @@ input[type=range].lower::-webkit-slider-runnable-track
   background: red
 
 @media (max-width:1680px)
-
+  .card-item-btn__buy
+    padding: 14px 33px
 @media (max-width:1440px)
-
+  .card-item-btn__buy
+    padding: 14px 29px
 @media (max-width:1366px)
   .social-net
     width: 35px
@@ -437,22 +438,26 @@ input[type=range].lower::-webkit-slider-runnable-track
     svg
       width: 20px
       height: 20px
+  .card-item-btn__buy
+    padding: 14px 26px
 @media (max-width:1280px)
-
+  .card-item-btn__buy
+    padding: 13px 24px
 @media (max-width:1024px)
-  .btn-main
-    padding: 18px 29px
+  .card-item-btn__buy
+    padding: 13px 22px
 @media (max-width:960px)
-
+  .card-item-btn__buy
+    padding: 13px 19px
 @media (max-width:768px)
-  .btn-main
-    padding: 15px 24px
-    font-size: 15px
-
+  .card-item-btn__buy
+    padding: 13px 16px
 @media (max-width:576px)
-
+  .card-item-btn__buy
+    padding: 13px 14px
 @media (max-width:420px)
-
+  .card-item-btn__buy
+    padding: 13px 12px
 @media (max-width:375px)
   .social-net
     width: 38px
@@ -460,9 +465,6 @@ input[type=range].lower::-webkit-slider-runnable-track
     svg
       width: 20px
       height: 20px
-  .btn-main
-    padding: 8px 19px
-    font-size: 12px
   .card-item
     max-width: 163px
     padding: 27px 10px 32px 10px
@@ -486,7 +488,7 @@ input[type=range].lower::-webkit-slider-runnable-track
     &__name
       margin-bottom: 26px
     &-btn__buy
-      padding: 14px 32px
+      padding: 13px 10px
     &:hover
       .card-item
         &__prices-current
