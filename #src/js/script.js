@@ -1,3 +1,6 @@
+@@include('./jquery-1.12.4.min.js')
+@@include('./slick.min.js')
+
 /* Раскрытие меню */
 const headerMenu = document.querySelector(".header__menu");
 const visableMenu = document.querySelector(".header__social");
@@ -63,28 +66,6 @@ if (window.location.pathname == "/") {
   sliderBlock.prepend(sliderNumbers);
   const container = document.querySelector(".container");
 
-  function sliderButtonPosition(width) {
-    if (width >= 768) {
-      const buttonPrev = document.querySelector(".epic-slider__arrows-prev");
-      buttonPrev.style.left =
-        (window.innerWidth - container.clientWidth) / 2 + 10 + "px";
-      const buttonNext = document.querySelector(".epic-slider__arrows-next");
-      buttonNext.style.left =
-        (window.innerWidth - container.clientWidth) / 2 + 260 + "px";
-    }
-    
-    if(width>=768){
-      sliderNumbers.style.left =
-      (window.innerWidth - container.clientWidth) / 2 + 90 + "px";
-    }
-  }
-
-  sliderButtonPosition(window.innerWidth);
-
-  window.addEventListener("resize", () => {
-    sliderButtonPosition(window.innerWidth);
-  });
-
   /*Анимируем изменение счетчика*/
   setInterval(() => {
     const mainSlider = document.querySelector(".epic-slider");
@@ -95,7 +76,7 @@ if (window.location.pathname == "/") {
     const totalRealSliders = totalSliders.length - clonesSlider.length;
     firstSlide++;
     sliderNumbers.innerHTML = `<span class="epic-slider__numbers-current"><span>0</span>${firstSlide}</span> - <span class="epic-slider__numbers-sum">0${totalRealSliders}</span>`;
-  }, 500);
+  }, 1000);
 
   /*Слайдер - популярное*/
   $(".popular-category__slider").slick({
