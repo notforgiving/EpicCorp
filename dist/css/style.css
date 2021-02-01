@@ -3526,8 +3526,9 @@ input[type=range].lower::-webkit-slider-runnable-track {
   }
 
   .cutaway-item__description td {
-    padding: 3px 30px 3px 0px;
-    max-width: 50px;
+    padding: 3px 20px 3px 0px;
+    max-width: 50%;
+    min-width: auto;
   }
 
   .cutaway-item__description th {
