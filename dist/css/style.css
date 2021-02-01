@@ -3417,6 +3417,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
   }
 
   .cutaway-item__in-basket form {
+    display: block;
     position: absolute;
     z-index: 30;
     top: 0;
