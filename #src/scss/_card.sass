@@ -1,166 +1,376 @@
-.card
-  &-container
-  &-title
-    margin-bottom: 68px
-  &-item__block
+.cutaway
+  &__container
+    display: grid
+    grid-template-areas: "bread bread bread" "title title title" "images mainImage desription" "accordion accordion accordion" "recomendationtitle recomendationtitle recomendationtitle" "recomendation recomendation recomendation"
+    grid-template-rows: repeat(6, auto)
+    grid-template-columns: 166px 46% 2fr
+    .bread-crumbs
+      grid-area: bread
+  &__title
+    margin-bottom: 60px
+    font-size: 29px
+    grid-area: title
+  &__description-btn
+    display: none
+  &__recomendation
+    margin-bottom: 103px
     display: flex
-    justify-content: space-between
-    margin-bottom: 43px
-  &-item__images
-    width: 166px
-  &-item__images-slider
-.images-slider__arrows
-  text-align: center
-  &:hover
-    cursor: pointer
-    svg
-      path
-        fill: #fff40c
+    justify-content: center
+    grid-area: recomendation
+    &-wrapper
+      width: 90%
+    &-title
+      margin-bottom: 25px
+      grid-area: recomendationtitle
+    &-slider
+      img
+        width: auto
+        height: 169px
+      .card-item
+        margin: 0 10px
+      &__arrows
+        position: absolute
+        top: 50%
+        transform: translateY(-50%) rotate(0deg)
+        cursor: pointer
+        &:hover
+          svg
+            path
+              fill: $accent
+        svg
+          width: 40px
+          height: 40px
+          path
+
+        &-left
+          left: -50px
+          transform: translateY(-50%) rotate(-90deg)
+        &-right
+          right: -50px
+          transform: translateY(-50%) rotate(90deg)
+  &-item
+    &__images
+      grid-area: images
+      img
+        height: 101px
+      &-slider
+        &__arrows
+          text-align: center
+          height: 15px
+          &:hover
+            cursor: pointer
+            svg
+              path
+                fill: $accent
+        &-part
+          width: 100px
+          border-radius: 5px
+          background-color: #202022
+          display: flex
+          justify-content: center
+          align-items: center
+          margin-bottom: 15px
+          width: 166px
+          padding: 6px 55px
+    &__main-img
+      display: flex
+      border-radius: 5px
+      background-color: #202022
+      height: auto
+      justify-content: center
+      align-items: center
+      position: relative
+      margin-left: 30px
+      margin-right: 30px
+      grid-area: mainImage
+      img
+        height: 358px
+    &__discount
+      border-radius: 3px
+      background-color: #ff004b
+      position: absolute
+      top: 20px
+      left: 23px
+      color: #ffffff
+      font-family: Roboto
+      font-size: 22px
+      font-weight: 700
+      padding: 4px 14px
+    &__detail
+      grid-area: desription
+    &__description
+      border-radius: 5px
+      border-spacing: 0px
+      border-collapse: collapse
+      margin-bottom: 17px
+      font-size: 16px
+      td,th
+        margin: 0
+        min-width: 180px
+        padding: 6px 0px 6px 35px
+        text-align: inherit
+      td
+        padding: 6px 0px 6px 50px
+      tr:nth-of-type(odd)
+        background-color: #282b30
+    &__buy-card
+      display: flex
+      margin-bottom: 33px
+      align-items: flex-end
+      justify-content: space-between
+      padding-right: 20px
+    &__current-price
+      color: $accent
+      font-size: 40px
+      font-weight: 700
+      line-height: 1
+      margin-right: 17px
+    &__old-price
+      color: #929296
+      font-size: 25px
+      font-weight: 500
+      line-height: 1
+      text-decoration: line-through
+    &__quantity
+      height: 40px
+      width: 120px
+      background-color: #39393b
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      &-value
+      &-btn
+        width: 40px
+        height: 40px
+        position: absolute
+        top: 50%
+        border-radius: 50%
+        transform: translateY(-50%)
+        background-color: #a6a6a7
+        transition: 0.2s
+
+        &:hover
+          background-color: $accent
+      &-minus
+        left: -20px
+      &-number
+        color: #dadfe6
+        font-size: 14px
+        font-weight: 400
+      &-plus
+        right: -20px
+    &__in-basket
+      form
+        display: none
+    &__btn
+      color: #232426
+      font-size: 20px
+      padding: 13px 59px
+      width: 260px
+      font-weight: 500
+    &__description-btn
+      display: none
+    &__accordion
+      grid-area: accordion
+      margin-top: 43px
+      &-input
+        &:checked
+          + .cutaway-item__accordion-label + .cutaway-item__accordion-body
+            padding: 30px 0
+            line-height: 1.2
+      &-label
+        border-radius: 25px
+        text-align: center
+        width: 250px
+        font-weight: 700
+        padding: 13px 30px 13px 20px
+      &-body
+
 .vartical-arrow-top
-  margin-bottom: 27px
-.vartical-arrow-bottom
-  margin-top: 12px
-  transform: rotate(180deg)
-.images-slider__item
-  width: 100px
-  border-radius: 5px
-  background-color: #202022
-  display: flex
-  justify-content: center
-  align-items: center
   margin-bottom: 15px
-  width: 166px
-  padding: 7px 55px
-  &-img
-    height: 103px
-// .card-item__main-img
-//   border-radius: 5px
-//   background-color: #202022
-//   width: 460px
-//   display: flex
-//   justify-content: center
-//   align-items: center
-//   position: relative
-//   margin-left: 30px
-//   margin-right: 30px
-// .card-item__discount
-//   border-radius: 3px
-//   background-color: #ff004b
-//   color: #ffffff
-//   font-size: 22px
-//   font-weight: 600
-//   padding: 8px 12px
-//   position: absolute
-//   top: 30px
-//   left: 20px
-// .card-item__detail
-//   flex: 1
-// .card-item__description
-//   border-radius: 5px
-//   border-spacing: 0px
-//   border-collapse: collapse
-//   margin-bottom: 37px
-//   td,th
-//     margin: 0
-//     padding: 7px 24px 7px 38px
-//   tr:nth-of-type(odd)
-//     background-color: #282b30
-// .card-item__buy-card
-//   display: flex
-//   margin-bottom: 33px
-//   align-items: flex-end
-//   justify-content: space-between
-//   padding-right: 20px
-// .card-item__current-price
-//   color: $accent
-//   font-size: 40px
-//   font-weight: 700
-//   line-height: 1
-//   margin-right: 17px
-// .card-item__old-price
-//   color: #929296
-//   font-size: 25px
-//   font-weight: 500
-//   line-height: 1
-//   text-decoration: line-through
-// .card-item__quantity
-//   height: 40px
-//   width: 120px
-//   background-color: #39393b
-//   position: relative
-//   display: flex
-//   justify-content: center
-//   align-items: center
-//   &-value
-//   &-minus
-//     left: -20px
-//   &-btn
-//     width: 40px
-//     height: 40px
-//     position: absolute
-//     top: 50%
-//     border-radius: 50%
-//     transform: translateY(-50%)
-//     background-color: #a6a6a7
-//     transition: 0.2s
-//     &:hover
-//       background-color: $accent
-//   &-number
-//     color: #dadfe6
-//     font-size: 14px
-//     font-weight: 400
-//   &-plus
-//     right: -20px
-// .card-item__in-basket
-// .card-item-btn
-//   color: #232426
-//   font-size: 20px
-//   font-weight: 500
-//   padding: 12px 59px
-// .card-item__description-card
-// .card-item__label
-//   border-radius: 25px
-//   text-align: center
-//   width: 200px
-//   padding: 10px 30px 10px 20px
-// .card-item__body
-// .card-item__input:checked+.card-item__label+.card-item__body
-//   padding: 30px 0px
-//   font-size: 15px
-//   font-weight: 400
-//   line-height: 21px
-// .card-item__label::before
-//   right: 15%
-//   transform: translateY(-50%) rotate(90deg)
-// .card-item__input:checked+.card-item__label::before
-//   transform: translateY(-50%) rotate(-90deg)
+.vartical-arrow-bottom
+  margin-top: 15px
+  transform: rotate(180deg)
 
-// .card-item__recomendation
-//   width: 1060px
-//   margin: 0 auto
-//   margin-bottom: 99px
-//   &-slider
-// .recomendation-item
-//   margin: 0 10px
-// .recomendation-item:nth-of-type(4n)
-//   margin: 0 10px
-
-// .recomendation-slider__arrows
-//   svg
-//     width: 40px
-//     height: auto
-//   &:hover
-//     cursor: pointer
-//     svg
-//       path
-//         fill: #fff40c
-// .recomendation-slider__arrow-left
-//   position: absolute
-//   top: 50%
-//   left: -50px
-//   transform: translateY(-50%) rotate(-90deg)
-// .recomendation-slider__arrow-right
-//   position: absolute
-//   top: 50%
-//   right: -50px
-//   transform: translateY(-50%) rotate(90deg)
+@media (max-width:1680px)
+@media (max-width:1440px)
+@media (max-width:1366px)
+@media (max-width:1280px)
+@media (max-width:1024px)
+@media (max-width:960px)
+@media (max-width:768px)
+@media (max-width:576px)
+@media (max-width:420px)
+@media (max-width:375px)
+  .cutaway
+    &__container
+      display: grid
+      grid-template-columns: 100%
+      grid-template-rows: repeat(7,auto)
+      grid-template-areas: "bread" "images" "title" "desription" "accordion" "recomendationtitle" "recomendation"
+      .bread-crumbs
+        margin-bottom: 55px
+    &__recomendation
+      width: 93vw
+      &-title
+        margin-top: 30px
+        margin-bottom: 5px
+        text-align: center
+    &__title
+      text-align: center
+      font-size: 25px
+      line-height: normal
+      margin-bottom: 55px
+    &-item
+      &__detail
+        display: grid
+        grid-template-columns: 100%
+        grid-template-rows: repeat(4,auto)
+        gap: 0px 0px
+        grid-template-areas: "price" "basket" "dbtn" "table"
+        grid-area: desription
+      &__in-basket
+        grid-area: basket
+        margin-bottom: 19px
+        position: relative
+        form
+          position: absolute
+          z-index: 30
+          top: 0
+          left: 0
+          height: 100%
+          width: 15%
+        .select-box
+          &__current
+            height: 100%
+            color: #232426
+            font-weight: 500
+            font-size: 16px
+            box-shadow: none
+            &:focus
+              .select-box__input-text
+                border-bottom: none
+              .select-box__icon
+                background-color: transparent
+                border: none
+          &__option
+            color: #232426
+            font-weight: 500
+            text-align: center
+            padding: 5px 0px
+          &__value
+          &__list
+            width: 100%
+            background-color: $accent
+            border: none
+            border-radius: 0 0 0 19px
+            top: 90%
+            z-index: 30
+          &__input-text
+            background-color: $accent
+            border: none
+            border-radius: 31px 0 0 31px
+            height: 100%
+            padding: 13px 0px
+            text-align: center
+          &__icon
+            border-radius: 0
+            border: none
+            right: 3px
+            width: 17px
+            height: 17px
+            svg
+              width: 10px
+              height: 7px
+              fill: none
+              path
+                fill: #232426
+      &__btn
+        width: 100%
+        position: relative
+        padding: 15px 59px
+        &::before
+          content: ''
+          position: absolute
+          width: 4px
+          background-color: #232426
+          height: 100%
+          left: 15%
+          top: 0
+      &__buy-card
+        grid-area: price
+        padding-right: 0
+        justify-content: center
+        margin-bottom: 45px
+      &__description
+        grid-area: table
+        width: 93vw
+        tbody
+          width: inherit
+        tr
+          width: inherit
+        td
+          padding: 3px 30px 3px 0px
+          max-width: 50px
+        th
+          padding: 3px 0 3px 15px
+          font-weight: normal
+      &__quantity
+        display: none
+      &__accordion
+        margin-top: 36px
+        &-label
+          display: none
+        &-body
+          height: auto
+          font-size: 15px
+          p
+            line-height: 1.4
+      &__description-btn
+        display: block
+      &__images
+        width: 93vw
+        &-slider
+          margin-bottom: 47px
+          .slick-dots
+            display: flex!important
+            justify-content: center
+            margin-top: 45px
+            li
+              width: 16px
+              height: 16px
+              border: 1px solid #a6a6a7
+              background-color: #232426
+              border-radius: 50%
+              margin: 0px 4px
+              display: flex
+              justify-content: center
+              align-items: center
+              button
+                color: transparent
+            .slick-active
+              button
+                width: 8px
+                height: 8px
+                border-radius: 50%
+                background-color: $accent
+          &-part
+            background-color: transparent
+            img
+              height: 252px
+      &__main
+        &-img
+          display: none
+      &__description-btn
+        margin-bottom: 25px
+        label
+          display: block
+          grid-area: dbtn
+          width: 100%
+          color: $accent
+          &::before
+            transition: 0.2s
+    &__title
+      &-mobile
+@media (max-width:320px)

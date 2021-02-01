@@ -29,6 +29,30 @@
     height: 22px
     opacity: 0.7
 
+.bread-crumbs
+  font-family: Roboto
+  font-size: 15px
+  font-weight: 400
+  margin-bottom: 39px
+  &__link
+    color: #bebebe
+    position: relative
+    padding-right: 2px
+    margin-right: 10px
+    &:first-child
+      color: #fff
+    &:last-child
+      &::after
+        content: ''
+    &::after
+      position: absolute
+      content: '/'
+      right: -10px
+      top: -2px
+
+.displayNone
+  display: none
+
 .yellowColor
   color: #fff40c
 
@@ -36,6 +60,9 @@
   border-radius: 31px
   background-color: $accent
   color: #232426
+  transition: 0.2s
+  &:hover
+    background-color: #fff74b
 
 .title
   font-family: "EuropeExt"
@@ -85,8 +112,10 @@
     justify-content: center
     align-items: flex-end
     width: 100%
-    height: 200px
+    height: auto
     margin-bottom: 8px
+    img
+      height: 197px
   &__discount
     padding: 2px 7px
     border-radius: 3px
@@ -149,41 +178,40 @@
     border-radius: 5px
     background-color: #282b30
     box-sizing: border-box
-    z-index: 100
+    z-index: 20
     font-size: 18px
     transition: color .35s
     position: relative
+    line-height: 1.3
     &::before
       content: '\276F'
       position: absolute
       top: 50%
-      right: 5%
-      transform: translateY(-50%) rotate(0deg)
+      right: 10%
+      transform: translateY(-50%) rotate(-90deg)
     &:hover
       color: #fff
   &-input
     display: none
-
-.accordion-input:checked + .accordion-label
-  color: $accent
-
-.accordion-input:checked + .accordion-label::before
-  transition: transform .35s
-  transform: translateY(-50%) rotate(90deg)
-.accordion-input:checked + .accordion-label + .accordion-body
-  height: auto
-  padding: 30px 40px
-  font-size: 16px
-  font-weight: 400
-  line-height: 25px
-
-.accordion-body
-  margin-bottom: 13px
-  width: calc(100% - 10px)
-  height: 0
-  transition: color 0.2s, padding 0.2s,height 0.2s
-  overflow: hidden
-  font-size: 16px
+    &:checked
+      + .accordion-label
+        color: $accent
+      + .accordion-label::before
+        transition: transform .35s
+        transform: translateY(-50%) rotate(90deg)
+      + .accordion-label + .accordion-body
+        height: auto
+        padding: 30px 40px
+        font-size: 16px
+        font-weight: 400
+        line-height: 25px
+  &-body
+    margin-bottom: 13px
+    width: calc(100% - 10px)
+    height: 0
+    transition: color 0.2s, padding 0.2s,height 0.2s
+    overflow: hidden
+    font-size: 16px
 
 /*Кастомный селект*/
 .catalog__select-box
@@ -428,9 +456,17 @@ input[type=range].lower::-webkit-slider-runnable-track
 @media (max-width:1680px)
   .card-item-btn__buy
     padding: 14px 33px
+  .card-item__img
+    img
+      height: 185px
 @media (max-width:1440px)
   .card-item-btn__buy
     padding: 14px 29px
+  .card-item
+    max-width: 240px
+  .card-item__img
+    img
+      height: 180px
 @media (max-width:1366px)
   .social-net
     width: 35px
@@ -440,24 +476,65 @@ input[type=range].lower::-webkit-slider-runnable-track
       height: 20px
   .card-item-btn__buy
     padding: 14px 26px
+  .card-item
+    max-width: 230px
+  .card-item__img
+    img
+      height: 175px
 @media (max-width:1280px)
   .card-item-btn__buy
     padding: 13px 24px
+  .card-item
+    max-width: 220px
+  .card-item__img
+    img
+      height: 170px
 @media (max-width:1024px)
   .card-item-btn__buy
     padding: 13px 22px
+  .card-item
+    max-width: 210px
+  .card-item__img
+    img
+      height: 165px
+  .bread-crumbs
+    margin-bottom: 28px
 @media (max-width:960px)
   .card-item-btn__buy
     padding: 13px 19px
+  .card-item
+    max-width: 200px
+  .card-item__img
+    img
+      height: 160px
 @media (max-width:768px)
   .card-item-btn__buy
     padding: 13px 16px
+  .card-item
+    max-width: 190px
+  .card-item__img
+    img
+      height: 155px
+  .bread-crumbs
+    margin-bottom: 27px
+  .accordion-input:checked+.accordion-label+.accordion-body
+    padding: 20px 0px 20px 20px
 @media (max-width:576px)
   .card-item-btn__buy
     padding: 13px 14px
+  .card-item
+    max-width: 180px
+  .card-item__img
+    img
+      height: 150px
 @media (max-width:420px)
   .card-item-btn__buy
     padding: 13px 12px
+  .card-item
+    max-width: 173px
+  .card-item__img
+    img
+      height: 145px
 @media (max-width:375px)
   .social-net
     width: 38px
@@ -471,8 +548,6 @@ input[type=range].lower::-webkit-slider-runnable-track
     margin-right: 4px
     margin-left: 4px
     margin-bottom: 15px
-    &:nth-of-type(4n)
-    &:hover
     &__img
       width: 100%
       height: auto
@@ -482,17 +557,11 @@ input[type=range].lower::-webkit-slider-runnable-track
     &__discount
       top: 11px
       left: 15px
-    &__prices
-      &-current
-      &-old
     &__name
       margin-bottom: 26px
     &-btn__buy
       padding: 13px 10px
-    &:hover
-      .card-item
-        &__prices-current
-        &__prices-old
-        &__name
-        &-btn__buy
+
+  .bread-crumbs
+    margin-bottom: 25px
 @media (max-width:320px)

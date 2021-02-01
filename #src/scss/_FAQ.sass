@@ -12,33 +12,11 @@
     right: 115px
     bottom: 0
     width: 25vw
-.bread-crumbs
-  font-family: Roboto
-  font-size: 15px
-  font-weight: 400
-  margin-bottom: 39px
-.bread-crumbs__link
-  color: #bebebe
-  position: relative
-  padding-right: 2px
-  margin-right: 10px
-  &:first-child
-    color: #fff
-  &:last-child
-    &::after
-      content: ''
-  &::after
-    position: absolute
-    content: '/'
-    right: -10px
-    top: -2px
-.faq
   &-title
     font-size: 30px
     margin-bottom: 51px
-
-.faq__accordion
-  width: 46%
+  &__accordion
+    width: 46%
 
 @media (max-width:1680px)
 
@@ -50,24 +28,22 @@
 @media (max-width:1280px)
 
 @media (max-width:1024px)
-  .faq__accordion-label
-    font-size: 15px
-  .faq__accordion-input:checked+.faq__accordion-label+.faq__accordion-body
-    font-size: 14px
   .faq__accordion
     width: 55%
 @media (max-width:960px)
-
-@media (max-width:768px)
   .faq__accordion
     width: 100%
+@media (max-width:768px)
   .faq__back-img
     z-index: -1
+  .faq
+    &-title
+      font-size: 25px
+      margin-bottom: 35px
 @media (max-width:576px)
 
 @media (max-width:420px)
-  .faq-title
-    margin-bottom: 20px
+
 @media (max-width:375px)
 
 @media (max-width:320px)

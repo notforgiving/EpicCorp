@@ -1,5 +1,5 @@
-@@include('./jquery-1.12.4.min.js')
-@@include('./slick.min.js')
+@@include("./jquery-1.12.4.min.js");
+@@include("./slick.min.js");
 
 /* Раскрытие меню */
 const headerMenu = document.querySelector(".header__menu");
@@ -36,7 +36,7 @@ try {
 }
 
 if (window.location.pathname == "/") {
-  const speed = 3000; //Скорость работы слайдера 3с
+  const speed = 2000; //Скорость работы слайдера 3сек
   /*Слайдер - баннер*/
   $(".epic-slider").slick({
     dots: false,
@@ -88,33 +88,75 @@ if (window.location.pathname == "/") {
   });
 } else if (window.location.pathname == "/card.html") {
   /*Слайдер - карточка товара*/
-  $(".card-item__images-slider").slick({
+  $(".cutaway-item__images-slider").slick({
     dots: false,
     arrows: true,
     slidesToShow: 3,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     slidesToScroll: 1,
     vertical: true,
     verticalSwiping: true,
     prevArrow:
-      '<div class="images-slider__arrows"><svg class="vartical-arrow-top" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><g><g><path fill="#787677" d="M.307 8.582L7.088.294a.892.892 0 0 1 .763-.325c.281-.022.57.09.762.325l6.781 8.288a.893.893 0 0 1-1.381 1.13L7.85 2.182 1.688 9.713a.892.892 0 0 1-1.381-1.13z"/></g></g></svg></div>',
+      '<div class="cutaway-item__images-slider__arrows"><svg class="vartical-arrow-top" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><g><g><path fill="#787677" d="M.307 8.582L7.088.294a.892.892 0 0 1 .763-.325c.281-.022.57.09.762.325l6.781 8.288a.893.893 0 0 1-1.381 1.13L7.85 2.182 1.688 9.713a.892.892 0 0 1-1.381-1.13z"/></g></g></svg></div>',
     nextArrow:
-      '<div class="images-slider__arrows"><svg class="vartical-arrow-bottom" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><g><g><path fill="#787677" d="M.307 8.582L7.088.294a.892.892 0 0 1 .763-.325c.281-.022.57.09.762.325l6.781 8.288a.893.893 0 0 1-1.381 1.13L7.85 2.182 1.688 9.713a.892.892 0 0 1-1.381-1.13z"/></g></g></svg></div>',
+      '<div class="cutaway-item__images-slider__arrows"><svg class="vartical-arrow-bottom" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><g><g><path fill="#787677" d="M.307 8.582L7.088.294a.892.892 0 0 1 .763-.325c.281-.022.57.09.762.325l6.781 8.288a.893.893 0 0 1-1.381 1.13L7.85 2.182 1.688 9.713a.892.892 0 0 1-1.381-1.13z"/></g></g></svg></div>',
+    responsive: [
+      {
+        breakpoint: 376,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+          vertical: false,
+          verticalSwiping: false,
+          dots: true,
+        },
+      },
+    ],
   });
   /* Слайдер - рекомендации*/
-  $(".card-item__recomendation-slider").slick({
+  $(".cutaway__recomendation-slider").slick({
     dots: false,
     arrows: true,
     slidesToShow: 4,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     slidesToScroll: 1,
     prevArrow:
-      '<div class="recomendation-slider__arrows"><svg class="recomendation-slider__arrow-left" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><g><g><path fill="#787677" d="M.307 8.582L7.088.294a.892.892 0 0 1 .763-.325c.281-.022.57.09.762.325l6.781 8.288a.893.893 0 0 1-1.381 1.13L7.85 2.182 1.688 9.713a.892.892 0 0 1-1.381-1.13z"/></g></g></svg></div>',
+      '<div class="cutaway__recomendation-slider__arrows cutaway__recomendation-slider__arrows-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><g><g><path fill="#787677" d="M.307 8.582L7.088.294a.892.892 0 0 1 .763-.325c.281-.022.57.09.762.325l6.781 8.288a.893.893 0 0 1-1.381 1.13L7.85 2.182 1.688 9.713a.892.892 0 0 1-1.381-1.13z"/></g></g></svg></div>',
     nextArrow:
-      '<div class="recomendation-slider__arrows"><svg class="recomendation-slider__arrow-right" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><g><g><path fill="#787677" d="M.307 8.582L7.088.294a.892.892 0 0 1 .763-.325c.281-.022.57.09.762.325l6.781 8.288a.893.893 0 0 1-1.381 1.13L7.85 2.182 1.688 9.713a.892.892 0 0 1-1.381-1.13z"/></g></g></svg></div>',
+      '<div class="cutaway__recomendation-slider__arrows cutaway__recomendation-slider__arrows-right"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><g><g><path fill="#787677" d="M.307 8.582L7.088.294a.892.892 0 0 1 .763-.325c.281-.022.57.09.762.325l6.781 8.288a.893.893 0 0 1-1.381 1.13L7.85 2.182 1.688 9.713a.892.892 0 0 1-1.381-1.13z"/></g></g></svg></div>',
+    responsive: [
+      {
+        breakpoint: 375,
+        settings: {
+          dots: false,
+          arrows: false,
+          slidesToShow: 2,
+          autoplay: false,
+          autoplaySpeed: 3000,
+          slidesToScroll: 1,
+          vertical: false,
+          verticalSwiping: false,
+        },
+      },
+    ],
   });
+
+  if(window.innerWidth<=375){
+    const descriptionBtn = document.querySelector('.cutaway-item__description-btn')
+    const desriptionInput = descriptionBtn.querySelector('input')
+    desriptionInput.addEventListener('click',()=>{
+      if(desriptionInput.checked){
+        document.querySelector('.cutaway-item__description').classList.add('displayNone')
+        document.querySelector('.cutaway-item__accordion-body').classList.add('displayNone')
+      }
+      else{
+        document.querySelector('.cutaway-item__description').classList.remove('displayNone')
+        document.querySelector('.cutaway-item__accordion-body').classList.remove('displayNone')
+      }
+    })
+  }
 } else if (window.location.pathname == "/catalog.html") {
   /*Ползунок цен */
   jQuery(document).ready(function () {
