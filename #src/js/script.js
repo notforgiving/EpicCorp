@@ -1,38 +1,53 @@
 @@include("./jquery-1.12.4.min.js");
 @@include("./slick.min.js");
 
-/* Раскрытие меню */
-const headerMenu = document.querySelector(".header__menu");
-const visableMenu = document.querySelector(".header__social");
-const menuBtn = document.querySelector("#menu-btn");
-const mobileMenu = document.querySelector("#menu_checkbox");
-
-try {
-  menuBtn.addEventListener(
-    "click",
-    (e) => {
-      headerMenu.classList.toggle("showFlex");
-      visableMenu.classList.toggle("lowMargin");
-      menuBtn.classList.toggle("yellowColor");
-    },
-    { passive: true }
-  );
-} catch {}
-
-try {
-  mobileMenu.addEventListener(
-    "click",
-    () => {
-      headerMenu.classList.toggle("showFlex");
-      visableMenu.classList.toggle("lowMargin");
-      menuBtn.classList.toggle("yellowColor");
-    },
-    { passive: true }
-  );
-} catch {
-  console.log(
-    "Возникла ошибка со скриптом мобильного меню. Приносим свои извинения за неудобства!"
-  );
+if (window.innerWidth <= 768) {
+  /* Раскрытие меню */
+  const showMenu = document.querySelector(".mobile-menu");
+  const menuBtn = document.querySelector("#menu-btn");
+  const mobileMenu = document.querySelector("#menu_checkbox");
+  const closeMenu = document.querySelector(".mobile-menu__close");
+  const mainMenu = document
+    .querySelector(".header__top__information")
+    .cloneNode(true);
+  const mobileContent = showMenu.querySelector(".mobile-menu__content");
+  mobileContent.append(mainMenu);
+  const social = document.querySelector(".header__social").cloneNode(true);
+  let btnForMobileMenu = document.createElement("a");
+  btnForMobileMenu.classList.add("header__social__link");
+  btnForMobileMenu.classList.add("white__link");
+  btnForMobileMenu.id = "menu-btn";
+  btnForMobileMenu.innerHTML = "Funko";
+  const doubleMenu = document
+    .querySelector(".header__menu-nav")
+    .cloneNode(true);
+  mobileContent.append(btnForMobileMenu);
+  mobileContent.append(doubleMenu);
+  mobileContent.append(social);
+  try {
+    mobileMenu.addEventListener(
+      "click",
+      () => {
+        menuBtn.classList.toggle("yellowColor");
+        showMenu.style.transform = "translateX(0%)";
+      },
+      { passive: true }
+    );
+    closeMenu.addEventListener("click", () => {
+      showMenu.style.transform = "translateX(100%)";
+      document.querySelector(".menu_checkbox").checked = false;
+    });
+  } catch {
+    console.log(
+      "Возникла ошибка со скриптом мобильного меню. Приносим свои извинения за неудобства!"
+    );
+  }
+} else {
+  const menuBtn = document.querySelector(".header__social__link");
+  const menu = document.querySelector(".header__menu");
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("showFlex");
+  });
 }
 
 if (window.location.pathname == "/") {
@@ -136,19 +151,20 @@ if (window.location.pathname == "/") {
       '<div class="cutaway__recomendation-slider__arrows cutaway__recomendation-slider__arrows-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><g><g><path fill="#787677" d="M.307 8.582L7.088.294a.892.892 0 0 1 .763-.325c.281-.022.57.09.762.325l6.781 8.288a.893.893 0 0 1-1.381 1.13L7.85 2.182 1.688 9.713a.892.892 0 0 1-1.381-1.13z"/></g></g></svg></div>',
     nextArrow:
       '<div class="cutaway__recomendation-slider__arrows cutaway__recomendation-slider__arrows-right"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><g><g><path fill="#787677" d="M.307 8.582L7.088.294a.892.892 0 0 1 .763-.325c.281-.022.57.09.762.325l6.781 8.288a.893.893 0 0 1-1.381 1.13L7.85 2.182 1.688 9.713a.892.892 0 0 1-1.381-1.13z"/></g></g></svg></div>',
-    responsive: [{
-      breakpoint: 768,
-      settings: {
-        dots: false,
-        arrows: false,
-        slidesToShow: 2,
-        autoplay: false,
-        autoplaySpeed: 3000,
-        slidesToScroll: 1,
-        vertical: false,
-        verticalSwiping: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          dots: false,
+          arrows: false,
+          slidesToShow: 2,
+          autoplay: false,
+          autoplaySpeed: 3000,
+          slidesToScroll: 1,
+          vertical: false,
+          verticalSwiping: false,
+        },
       },
-    },
       {
         breakpoint: 376,
         settings: {
@@ -165,19 +181,28 @@ if (window.location.pathname == "/") {
     ],
   });
 
-  if(window.innerWidth<=375){
-    const descriptionBtn = document.querySelector('.cutaway-item__description-btn')
-    const desriptionInput = descriptionBtn.querySelector('input')
-    desriptionInput.addEventListener('click',()=>{
-      if(desriptionInput.checked){
-        document.querySelector('.cutaway-item__description').classList.add('displayNone')
-        document.querySelector('.cutaway-item__accordion-body').classList.add('displayNone')
+  if (window.innerWidth <= 375) {
+    const descriptionBtn = document.querySelector(
+      ".cutaway-item__description-btn"
+    );
+    const desriptionInput = descriptionBtn.querySelector("input");
+    desriptionInput.addEventListener("click", () => {
+      if (desriptionInput.checked) {
+        document
+          .querySelector(".cutaway-item__description")
+          .classList.add("displayNone");
+        document
+          .querySelector(".cutaway-item__accordion-body")
+          .classList.add("displayNone");
+      } else {
+        document
+          .querySelector(".cutaway-item__description")
+          .classList.remove("displayNone");
+        document
+          .querySelector(".cutaway-item__accordion-body")
+          .classList.remove("displayNone");
       }
-      else{
-        document.querySelector('.cutaway-item__description').classList.remove('displayNone')
-        document.querySelector('.cutaway-item__accordion-body').classList.remove('displayNone')
-      }
-    })
+    });
   }
 } else if (window.location.pathname == "/catalog.html") {
   /*Ползунок цен */

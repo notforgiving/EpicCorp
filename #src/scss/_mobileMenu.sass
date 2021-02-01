@@ -1,0 +1,57 @@
+.mobile-menu
+  position: absolute
+  top: 0
+  right: 0
+  height: 100vh
+  background-position-x: 0
+  background-repeat: repeat-x
+  z-index: 500
+  width: 100vw
+  transform: translateX(100%)
+  transition: 0.4s
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  font-family: EuropeExt
+  &__content
+    width: 70%
+    padding-top: 50px
+    a
+      color: #000
+    .information__logo-img
+      display: none
+    .information__link
+      display: block
+    .header__social
+      display: block
+      margin-top: 30px
+      &-nets
+        justify-content: space-around
+      .header__social__link
+        display: none
+      .social-nets__item
+        background-color: #131314
+        svg
+          width: 22px
+          height: 22px
+          path
+            fill: $accent
+    .header__top__information
+      font-size: 14px
+    .header__social__link
+      display: block
+      font-size: 15px
+      margin-top: 30px
+    .header__menu-nav
+      display: none
+      flex-direction: column
+      margin-top: 10px
+  &__close
+    position: absolute
+    top: 10px
+    right: 10px
+    svg
+      width: 20px
+      height: 20px
+      path
+        fill: #000
