@@ -99,7 +99,16 @@
     margin-bottom: 43px
     &-nets
       display: flex
+      flex: 1
+      justify-content: flex-end
       align-items: center
+    &__link
+      display: none
+    &-information
+      display: none
+      &-menu
+        &__link
+          margin-right: 44px
   &__link
     font-family: Roboto
     font-size: 20px
@@ -133,7 +142,7 @@
   display: none
 
 @media (max-width:1680px)
-  
+
 @media (max-width:1440px)
   .header
     &__top
@@ -166,7 +175,6 @@
     &__search-input
       &:focus
         width: 23vw
-@media (max-width:576px)
   .basket-btn
     margin-right: 14px
   .enter-btn
@@ -194,11 +202,9 @@
       padding-top: 4px
   .site__enter-btn
     margin-right: 0
-
   .menu-nav__link
     margin-left: 0
     margin-right: 25px
-
   #webapp_cover
     width: 31px
     display: block
@@ -238,7 +244,7 @@
     font-size: 8px
     font-weight: bold
     text-align: center
-  #menu_checkbox:checked 
+  #menu_checkbox:checked
     .mobile-menu
       width: 100vw
   #menu_checkbox:checked + #menu_label:before
@@ -254,7 +260,10 @@
       top: -24px
     100%
       top: -18px
-@media (max-width:420px)
+@media (max-width:576px)
+@media (max-width:480px)
+  #menu_label
+    height: 27px
 @media (max-width:375px)
   .information
     &__search-btn

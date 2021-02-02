@@ -3,8 +3,8 @@
   top: 0
   right: 0
   height: 100vh
-  background-position-x: 0
-  background-repeat: repeat-x
+  background-position-x: 50%
+  background-repeat: no-repeat
   z-index: 500
   width: 100vw
   transform: translateX(100%)
@@ -12,46 +12,88 @@
   display: flex
   flex-direction: column
   align-items: flex-end
-  font-family: EuropeExt
   &__content
-    width: 70%
-    padding-top: 50px
+    width: 55vw
+    padding-top: 60px
+    color: #000
+    margin-right: 30px
+    #menu-btn
+      font-size: 15px
+      text-transform: uppercase
+      font-weight: 700
+      width: fit-content
+      margin-bottom: 20px
+      &:hover
+        &::after
+          background-color: #000
+    .header__top__information
+      .information__link
+        font-family: EuropeExt
+        font-size: 16px
+    .header__menu
+      margin: 0
+      &-nav
+        display: flex
+        flex-direction: column
+        a
+          margin-bottom: 10px
     a
       color: #000
     .information__logo-img
       display: none
+    .information__search-form
+      display: none
+    .header__social-information-menu__link
+      &::after
+        background-color: #000
+    .menu-nav__link
+      &::after
+        background-color: #000
     .information__link
       display: block
+      &::after
+        background-color: #000
+    .basket-btn
+      display: none
+    #webapp_cover
+      display: none
+    .header__social-information-menu
+      display: flex
+      flex-direction: column
+      a
+        margin-bottom: 10px
+    .social-nets__item
+      margin-left: 0
     .header__social
       display: block
       margin-top: 30px
       &-nets
         justify-content: space-around
-      .header__social__link
-        display: none
+        position: absolute
+        top: 80vh
+        left: 41%
+        width: 55%
       .social-nets__item
-        background-color: #131314
+        background-color: #232426
+        width: 40px
+        height: 40px
         svg
-          width: 22px
-          height: 22px
+          width: 25px
+          height: 25px
           path
             fill: $accent
-    .header__top__information
-      font-size: 14px
-    .header__social__link
-      display: block
-      font-size: 15px
-      margin-top: 30px
-    .header__menu-nav
-      display: none
-      flex-direction: column
-      margin-top: 10px
   &__close
     position: absolute
-    top: 10px
-    right: 10px
+    top: 15px
+    right: 15px
     svg
-      width: 20px
-      height: 20px
+      width: 30px
+      height: 30px
       path
         fill: #000
+
+@media (max-width:375px)
+  .mobile-menu__content
+    width: 60vw
+  .information__link
+    margin-right: 15px

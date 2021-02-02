@@ -8,12 +8,19 @@
             src="./img/logo.gif"
             alt="Логотип Epic Corp"
         /></a>
-        <a class="information__link white__link" href="catalog.html">Каталог</a
-        ><a class="information__link white__link" href="404.html">Информация</a>
+        <span class="information__link white__link" id="catalog-link"
+          >Каталог</span
+        ><span class="information__link white__link" id="information-link"
+          >Информация</span
+        >
       </div>
       <div class="header__top__basket">
         <form class="information__search-form">
-          <input class="information__search-input" type="text" placeholder="Поиск по сайту...">
+          <input
+            class="information__search-input"
+            type="text"
+            placeholder="Поиск по сайту..."
+          />
           <button class="information__search-btn">
             <svg
               class="search__icon"
@@ -53,7 +60,9 @@
                 </g>
               </g>
             </svg>
-            <span class="basket-btn__card-sum-products"><strong>10</strong></span>
+            <span class="basket-btn__card-sum-products"
+              ><strong>10</strong></span
+            >
           </span>
           <span class="basket-btn__price"><strong>1 000</strong> Р</span>
         </button>
@@ -68,7 +77,26 @@
       </div>
     </div>
     <div class="header__social lowMargin">
-      <a class="header__social__link white__link" href="#" id="menu-btn">Funko</a>
+      <span class="header__social__link white__link" id="menu-btn">Funko</span>
+      <div class="header__social-information">
+        <nav class="header__social-information-menu">
+          <a
+            href="404.html"
+            class="header__social-information-menu__link white__link"
+            >О нас</a
+          >
+          <a
+            href="404.html"
+            class="header__social-information-menu__link white__link"
+            >Доставка и оплата</a
+          >
+          <a
+            href="faq.html"
+            class="header__social-information-menu__link white__link"
+            >FAQ</a
+          >
+        </nav>
+      </div>
       <div class="header__social-nets">
         <a class="social-nets__item social-net" href="404.html">
           <svg
@@ -112,7 +140,7 @@
       </div>
     </div>
     <div class="header__menu">
-      <nav class="header__menu-nav">
+      <div class="header__menu-nav">
         <a href="404.html" class="menu-nav__link white__link">Кино и Сериалы</a>
         <a href="404.html" class="menu-nav__link white__link">Игры</a>
         <a href="404.html" class="menu-nav__link white__link"
@@ -120,7 +148,7 @@
         >
         <a href="404.html" class="menu-nav__link white__link">Комиксы</a>
         <a href="404.html" class="menu-nav__link white__link">Прочее</a>
-      </nav>
+      </div>
     </div>
   </div>
 </header>
