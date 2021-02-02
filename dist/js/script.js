@@ -12,11 +12,13 @@ if (window.innerWidth <= 768) {
   const mobileMenuContent = mobileMenu.querySelector(".mobile-menu__content");
 
   const closeMenu = document.querySelector(".mobile-menu__close");
-  
-  const headerTop = document.querySelector('.header__top').cloneNode(true)
-  const headerMiddle = document.querySelector('.header__social').cloneNode(true)
-  const headerBottom = document.querySelector('.header__menu')
-  
+
+  const headerTop = document.querySelector(".header__top").cloneNode(true);
+  const headerMiddle = document
+    .querySelector(".header__social")
+    .cloneNode(true);
+  const headerBottom = document.querySelector(".header__menu");
+
   mobileMenuContent.append(headerTop);
   mobileMenuContent.append(headerMiddle);
   mobileMenuContent.append(headerBottom);
@@ -26,45 +28,51 @@ if (window.innerWidth <= 768) {
       "click",
       () => {
         mobileMenu.style.transform = "translateX(0%)";
-        document.querySelector('html').style.overflow = 'hidden'
+        document.querySelector("html").style.overflow = "hidden";
       },
       { passive: true }
     );
     closeMenu.addEventListener("click", () => {
       mobileMenu.style.transform = "translateX(100%)";
-      document.querySelector('html').style.overflow = 'auto'
+      document.querySelector("html").style.overflow = "auto";
     });
 
-    const catalogLink = mobileMenuContent.querySelector('#catalog-link')
-    const informationLink = mobileMenuContent.querySelector('#information-link')
-    const informationBody = mobileMenuContent.querySelector('.header__social-information')
-    const catalogBody = mobileMenuContent.querySelector('#menu-btn')
-    const funkoBtn = mobileMenuContent.querySelector('#menu-btn')
-    const informationBodyMenu = mobileMenuContent.querySelector(".header__menu");
+    const catalogLink = mobileMenuContent.querySelector("#catalog-link");
+    const informationLink = mobileMenuContent.querySelector(
+      "#information-link"
+    );
+    const informationBody = mobileMenuContent.querySelector(
+      ".header__social-information"
+    );
+    const catalogBody = mobileMenuContent.querySelector("#menu-btn");
+    const funkoBtn = mobileMenuContent.querySelector("#menu-btn");
+    const informationBodyMenu = mobileMenuContent.querySelector(
+      ".header__menu"
+    );
 
-    informationLink.addEventListener('click',()=>{
-      informationBody.classList.toggle('showFlex')
+    informationLink.addEventListener("click", () => {
+      informationBody.classList.toggle("showFlex");
 
-      if(catalogBody.classList.value.includes('showFlex')){
-        catalogBody.classList.toggle('showFlex')
+      if (catalogBody.classList.value.includes("showFlex")) {
+        catalogBody.classList.toggle("showFlex");
       }
-      if(funkoBtn.classList.value.includes('showFlex')){
+      if (funkoBtn.classList.value.includes("showFlex")) {
         funkoBtn.classList.toggle("showFlex");
       }
-      if(informationBodyMenu.classList.value.includes('showFlex')){
+      if (informationBodyMenu.classList.value.includes("showFlex")) {
         informationBodyMenu.classList.toggle("showFlex");
       }
-    })//показ второго уровня меню по клику на информацию
+    }); //показ второго уровня меню по клику на информацию
 
-    catalogLink.addEventListener('click',()=>{
-      catalogBody.classList.toggle('showFlex')
-      if(informationBody.classList.value.includes('showFlex')){
-        informationBody.classList.toggle('showFlex')
+    catalogLink.addEventListener("click", () => {
+      catalogBody.classList.toggle("showFlex");
+      if (informationBody.classList.value.includes("showFlex")) {
+        informationBody.classList.toggle("showFlex");
       }
-      if(catalogBody.classList.value.includes('showFlex')){
-        catalogBody.classList.toggle('showFlex')
+      if (informationBodyMenu.classList.value.includes("showFlex")) {
+        informationBodyMenu.classList.toggle("showFlex");
       }
-    }) //показ второго уровня меню по клику на каталог
+    }); //показ второго уровня меню по клику на каталог
 
     catalogBody.addEventListener("click", () => {
       informationBodyMenu.classList.toggle("showFlex");
@@ -75,37 +83,37 @@ if (window.innerWidth <= 768) {
     );
   }
 } else {
-  const catalogLink = document.querySelector('#catalog-link')
-  const informationLink = document.querySelector('#information-link')
-  const informationBody = document.querySelector('.header__social-information')
-  const catalogBody = document.querySelector('#menu-btn')
+  const catalogLink = document.querySelector("#catalog-link");
+  const informationLink = document.querySelector("#information-link");
+  const informationBody = document.querySelector(".header__social-information");
+  const catalogBody = document.querySelector("#menu-btn");
 
   const menuBtn = document.querySelector(".header__social__link");
   const menu = document.querySelector(".header__menu");
 
-  informationLink.addEventListener('click',()=>{
-    informationBody.classList.toggle('showFlex')
-    if(catalogBody.classList.value.includes('showFlex')){
-      catalogBody.classList.toggle('showFlex')
+  informationLink.addEventListener("click", () => {
+    informationBody.classList.toggle("showFlex");
+    if (catalogBody.classList.value.includes("showFlex")) {
+      catalogBody.classList.toggle("showFlex");
     }
-    if(menu.classList.value.includes('showFlex')){
+    if (menu.classList.value.includes("showFlex")) {
       menu.classList.toggle("showFlex");
     }
-    if(menu.classList.value.includes('showFlex')){
+    if (menu.classList.value.includes("showFlex")) {
       menu.classList.toggle("showFlex");
     }
-  })//показ второго уровня меню по клику на информацию
-  
-  catalogLink.addEventListener('click',()=>{
-    catalogBody.classList.toggle('showFlex')
-    if(informationBody.classList.value.includes('showFlex')){
-      informationBody.classList.toggle('showFlex')
+  }); //показ второго уровня меню по клику на информацию
+
+  catalogLink.addEventListener("click", () => {
+    catalogBody.classList.toggle("showFlex");
+    if (informationBody.classList.value.includes("showFlex")) {
+      informationBody.classList.toggle("showFlex");
     }
-  }) //показ второго уровня меню по клику на каталог
-  
+  }); //показ второго уровня меню по клику на каталог
+
   menuBtn.addEventListener("click", () => {
     menu.classList.toggle("showFlex");
-    menuBtn.classList.toggle('yellowColor')
+    menuBtn.classList.toggle("yellowColor");
   }); //Показ 3 уровня меню
 }
 
@@ -204,7 +212,7 @@ if (window.location.pathname == "/") {
     dots: false,
     arrows: true,
     slidesToShow: 4,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3000,
     slidesToScroll: 1,
     prevArrow:
@@ -241,7 +249,7 @@ if (window.location.pathname == "/") {
     ],
   });
 
-  if (window.innerWidth <= 375) {
+  if (window.innerWidth <= 768) {
     const descriptionBtn = document.querySelector(
       ".cutaway-item__description-btn"
     );
