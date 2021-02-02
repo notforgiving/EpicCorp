@@ -339,3 +339,17 @@ if (window.location.pathname == "/") {
     });
   });
 }
+
+const buyBtns = document.querySelectorAll('.card-item-btn__buy')
+const alert = document.querySelector('.alert')
+const closeAlert = document.querySelector('.alert__close')
+buyBtns.forEach((item)=>{
+  item.addEventListener('click',()=>{
+    alert.classList.toggle('alertShow')
+  })
+})
+
+closeAlert.addEventListener('click',()=>{
+  alert.classList.toggle('alertShow')
+})
+
