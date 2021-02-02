@@ -40,6 +40,7 @@ if (window.innerWidth <= 768) {
 
     informationLink.addEventListener('click',()=>{
       informationBody.classList.toggle('showFlex')
+
       if(catalogBody.classList.value.includes('showFlex')){
         catalogBody.classList.toggle('showFlex')
       }
@@ -55,6 +56,9 @@ if (window.innerWidth <= 768) {
       catalogBody.classList.toggle('showFlex')
       if(informationBody.classList.value.includes('showFlex')){
         informationBody.classList.toggle('showFlex')
+      }
+      if(catalogBody.classList.value.includes('showFlex')){
+        catalogBody.classList.toggle('showFlex')
       }
     }) //показ второго уровня меню по клику на каталог
 
