@@ -105,6 +105,9 @@ if (window.innerWidth <= 768) {
     if (informationBody.classList.value.includes("showFlex")) {
       informationBody.classList.toggle("showFlex");
     }
+    if(menu.classList.value.includes('showFlex')){
+      menu.classList.toggle("showFlex");
+    }
   }); //показ второго уровня меню по клику на каталог
 
   menuBtn.addEventListener("click", () => {
@@ -112,6 +115,30 @@ if (window.innerWidth <= 768) {
     menuBtn.classList.toggle("yellowColor");
   }); //Показ 3 уровня меню
 }
+
+if(window.innerWidth <= 768){
+  const searchBtn = document.querySelector('.information__search-btn-mobile')
+  const mobileSearch = document.querySelector('.header__mobile-search')
+  const closeBtnSearch = mobileSearch.querySelector('.information__search-btn')
+
+  searchBtn.addEventListener('click',()=>{
+    mobileSearch.classList.toggle('header__mobile-search-show')
+  })
+  closeBtnSearch.addEventListener('click',()=>{
+    mobileSearch.classList.toggle('header__mobile-search-show')
+  })
+}
+
+/*Появление кнопки на быстрый подъем наверх*/
+const up = document.querySelector('.arrow__up')
+document.addEventListener('scroll',()=>{
+  if(window.scrollY>=500){
+    up.style.display = 'flex'
+  }
+  else{
+    up.style.display = 'none'
+  }
+})
 
 /*Для каждой страницы свой кусок кода*/
 if (window.location.pathname == "/") {
@@ -182,7 +209,7 @@ if (window.location.pathname == "/") {
       '<div class="cutaway-item__images-slider__arrows"><svg class="vartical-arrow-bottom" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><g><g><path fill="#787677" d="M.307 8.582L7.088.294a.892.892 0 0 1 .763-.325c.281-.022.57.09.762.325l6.781 8.288a.893.893 0 0 1-1.381 1.13L7.85 2.182 1.688 9.713a.892.892 0 0 1-1.381-1.13z"/></g></g></svg></div>',
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 801,
         settings: {
           arrows: false,
           slidesToShow: 1,
@@ -192,7 +219,7 @@ if (window.location.pathname == "/") {
         },
       },
       {
-        breakpoint: 376,
+        breakpoint: 481,
         settings: {
           arrows: false,
           slidesToShow: 1,
@@ -217,11 +244,10 @@ if (window.location.pathname == "/") {
       '<div class="cutaway__recomendation-slider__arrows cutaway__recomendation-slider__arrows-right"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><g><g><path fill="#787677" d="M.307 8.582L7.088.294a.892.892 0 0 1 .763-.325c.281-.022.57.09.762.325l6.781 8.288a.893.893 0 0 1-1.381 1.13L7.85 2.182 1.688 9.713a.892.892 0 0 1-1.381-1.13z"/></g></g></svg></div>',
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 801,
         settings: {
           dots: false,
-          arrows: false,
-          slidesToShow: 2,
+          slidesToShow: 3,
           autoplay: false,
           autoplaySpeed: 3000,
           slidesToScroll: 1,
@@ -230,7 +256,7 @@ if (window.location.pathname == "/") {
         },
       },
       {
-        breakpoint: 376,
+        breakpoint: 481,
         settings: {
           dots: false,
           arrows: false,

@@ -58,6 +58,8 @@
       z-index: 3
       right: 0
       cursor: pointer
+      &-mobile
+        display: none
 .search__icon
   fill: #fff40c
   width: 20px
@@ -140,9 +142,9 @@
 
 #webapp_cover
   display: none
-
+.header__mobile-search
+  display: none
 @media (max-width:1680px)
-
 @media (max-width:1440px)
   .header
     &__top
@@ -174,7 +176,7 @@
       display: none
     &__search-input
       &:focus
-        width: 23vw
+        width: 40vw
   .basket-btn
     margin-right: 14px
   .enter-btn
@@ -261,6 +263,53 @@
     100%
       top: -18px
 @media (max-width:576px)
+  .information
+    &__search
+      &-form
+        display: none
+      &-btn-mobile
+        display: block
+        margin-right: 17px
+        svg
+          width: 25px
+          height: 25px
+  .header__mobile-search
+    display: block
+    background-color: #1f2124
+    padding: 19px 0px 19px 0px
+    position: absolute
+    top: -100%
+    left: 0
+    width: 100vw
+    z-index: 10
+    transition: 0.2s
+    .information
+      &__search
+        &-form
+          display: block
+          width: 95%
+          margin: 0 auto
+        &-input
+          width: 100%
+          background-size: 25px
+          background-position: 20px 70%
+          background-repeat: no-repeat
+          padding-left: 60px
+          background-color: #39393b
+          border-radius: 20px
+        &-btn
+          z-index: 5
+          right: 5px
+          display: flex
+          align-items: center
+          justify-content: center
+          padding-top: 0
+          svg
+            width: 20px
+            height: 20px
+  .header__mobile-search-show
+    top: 71px
+    transition: 0.2s
 @media (max-width:480px)
   #menu_label
     height: 27px
@@ -269,8 +318,6 @@
     &__search-btn
       margin-right: 10px
       width: 15px
-    &__search-input:focus
-      width: 64vw
       + .information__search-btn
         width: 24px
     &__logo-img

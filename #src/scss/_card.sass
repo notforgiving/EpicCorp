@@ -149,7 +149,6 @@
         transform: translateY(-50%)
         background-color: #a6a6a7
         transition: 0.2s
-
         &:hover
           background-color: $accent
       &-minus
@@ -197,9 +196,98 @@
 @media (max-width:1440px)
 @media (max-width:1366px)
 @media (max-width:1280px)
+  .cutaway
+    &__container
+      display: grid
+      grid-template-areas: "bread bread bread" "title title title" "images mainImage desription" "accordion accordion accordion" "recomendationtitle recomendationtitle recomendationtitle" "recomendation recomendation recomendation"
+      grid-template-rows: repeat(6, auto)
+      grid-template-columns: 150px 40% 2fr
 @media (max-width:1024px)
 @media (max-width:960px)
-@media (max-width:768px)
+@media (max-width:800px)
+  .cutaway
+    &__container
+      display: grid
+      grid-template-areas: "bread bread" "title title" "images desription" "accordion accordion" "recomendationtitle recomendationtitle" "recomendation recomendation"
+      grid-template-rows: repeat(6, auto)
+      grid-template-columns: 40% 60%
+    &__recomendation
+      width: 100%
+      &-wrapper
+        width: 70vw
+      &-title
+        text-align: center
+      &-slider__arrows
+        svg
+          width: 30px
+          height: 30px
+        &-left
+          left: -36px
+        &-right
+          right: -36px
+    &-item
+      &__main-img
+        display: none
+      &__description
+        width: 100%
+        tbody
+          width: inherit
+        tr
+          width: inherit
+        td
+          padding: 3px 20px 3px 0px
+          max-width: 50%
+          min-width: auto
+        th
+          padding: 3px 0 3px 15px
+          font-weight: normal
+      &__images
+        margin-right: 26px
+        &-slider
+          margin-bottom: 47px
+          .slick-dots
+            display: flex!important
+            justify-content: center
+            margin-top: 45px
+            li
+              width: 16px
+              height: 16px
+              border: 1px solid #a6a6a7
+              background-color: #232426
+              border-radius: 50%
+              margin: 0px 4px
+              display: flex
+              justify-content: center
+              align-items: center
+              button
+                color: transparent
+            .slick-active
+              button
+                width: 8px
+                height: 8px
+                border-radius: 50%
+                background-color: $accent
+          &-part
+            background-color: transparent
+            img
+              height: 252px
+      &__main
+        &-img
+          display: none
+      &__description-btn
+        margin-bottom: 25px
+        label
+          display: block
+          grid-area: dbtn
+          width: 100%
+          color: $accent
+          &::before
+            transition: 0.2s
+    &__title
+      &-mobile
+@media (max-width:576px)
+@media (max-width:420px)
+@media (max-width:481px)
   .cutaway
     &__container
       display: grid
@@ -372,7 +460,4 @@
             transition: 0.2s
     &__title
       &-mobile
-@media (max-width:576px)
-@media (max-width:420px)
-@media (max-width:375px)
 @media (max-width:320px)

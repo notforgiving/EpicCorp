@@ -36,6 +36,7 @@ html,body,ul,li,h1,h2,h3,h4,h5,h6,p
 html,body
   min-width: 375px
   overflow-x: hidden
+  scroll-behavior: smooth
 
 ::-webkit-scrollbar-button
   background-image: url('')
@@ -104,9 +105,10 @@ button
 @media (max-width:1024px)
 @media (max-width:960px)
 @media (max-width:768px)
-@media (max-width:576px)
   .container
+    max-width: 768px
     padding: 0 15px
+@media (max-width:576px)
 @media (max-width:420px)
   .container
     max-width: 375px

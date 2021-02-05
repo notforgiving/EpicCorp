@@ -70,7 +70,7 @@
   transition: 0.2s
   &:hover
     background-color: #fff74b
-    
+
 .alert
   background-color: #fffbce
   border-radius: 19px
@@ -80,7 +80,7 @@
   left: 50%
   transform: translateX(-50%)
   width: 90%
-  background-size: 4%
+  background-size: contain
   background-position: 20px 60%
   background-repeat: no-repeat
   display: flex
@@ -116,7 +116,19 @@
     opacity: 1
   100%
     opacity: 1
-    
+
+.arrow__up
+  width: 54px
+  height: 54px
+  display: none
+  justify-content: center
+  align-items: center
+  position: fixed
+  right: 20px
+  bottom: 10vh
+  background-color: #fff
+  border-radius: 50%
+
 .title
   font-family: "EuropeExt"
   font-weight: 700
@@ -269,6 +281,7 @@
 /*Кастомный селект*/
 .catalog__select-box
   width: 260px
+
 .select-box
   &__current
     position: relative
@@ -291,6 +304,7 @@
           fill: #232426
       .select-box__input-text
         border-radius: 19px 19px 0px 0px
+        border: 1px solid #5c5c5f
         border-bottom: 1px solid #282b30
   &__icon
     position: absolute
@@ -318,7 +332,6 @@
   &__input-text
     display: none
     border-radius: 19px
-    border: 1px solid #5c5c5f
     width: 100%
     margin: 0
     padding: 6px 15px
@@ -342,6 +355,7 @@
     border: 1px solid #5c5c5f
     border-top: none
     overflow: hidden
+    z-index: 20
   &__option
     display: block
     padding: 5px 15px
@@ -404,6 +418,7 @@
       animation: wave .4s ease
       svg
         stroke-dashoffset: 0
+
 .inline-svg
   position: absolute
   width: 0
@@ -589,6 +604,8 @@ input[type=range].lower::-webkit-slider-runnable-track
     img
       height: 145px
 @media (max-width:375px)
+  .alert
+    background-size: 4%
   .social-net
     width: 38px
     height: 38px

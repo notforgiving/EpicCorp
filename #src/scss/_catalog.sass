@@ -3,6 +3,8 @@
   &-container
   &__body
     display: flex
+  &-title
+    margin-bottom: 47px
   &__filters
     width: 267px
     margin-right: 29px
@@ -47,9 +49,7 @@
   &__figurines-header
     display: flex
     justify-content: space-between
-    align-items: center
     margin-bottom: 51px
-  &__figurines-title
   &__figuries-items
     flex-wrap: wrap
     display: flex
@@ -165,3 +165,28 @@
     display: block
     &:last-child
       margin-bottom: 0
+
+.catalog__figurines-filters
+  display: flex
+  flex: 1
+  &__result
+    color: $accent
+    margin-right: 15px
+    min-width: 133px
+  &-choice
+    display: flex
+    flex-wrap: wrap
+  &-item
+    border-radius: 21px
+    background-color: #383b3f
+    padding: 8px 18px 8px 18px
+    font-family: Roboto
+    font-size: 15px
+    font-weight: 400
+    text-transform: uppercase
+    margin: 0 9px 10px 0
+    button
+      margin-right: 10px
+      svg
+        width: 12px
+        height: 12px
