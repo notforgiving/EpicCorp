@@ -8,6 +8,8 @@
   &__filters
     width: 267px
     margin-right: 29px
+    &-mobile
+      display: none
     &-body
       border-radius: 5px
       background-color: #282b30
@@ -46,6 +48,9 @@
       background-color: #39393b
   &__figurines
     flex: 1
+    &-filters
+      &-mobile
+        display: none
   &__figurines-header
     display: flex
     justify-content: space-between
@@ -55,12 +60,6 @@
     display: flex
     justify-content: space-between
     margin-bottom: 50px
-    .card-item
-      margin-right: 30px
-    .card-item:nth-of-type(4n)
-      margin-right: 30px
-    .card-item:nth-of-type(3n)
-      margin-right: 0
   &__figurines-pages
     display: flex
     justify-content: center
@@ -100,7 +99,8 @@
   border: 1px solid #ffffff
   svg
     transform: rotate(-90deg)
-
+.more
+  display: none
 .catalog__filters-body__range
   margin-top: 20px
 .range-title
@@ -190,3 +190,83 @@
       svg
         width: 12px
         height: 12px
+
+@media (max-width:1680px)
+@media (max-width:1440px)
+@media (max-width:1366px)
+@media (max-width:1280px)
+@media (max-width:1024px)
+@media (max-width:960px)
+@media (max-width:800px)
+  .catalog
+    &__figurines
+      &-header
+      &-filters
+        flex-wrap: wrap
+        &__result
+          width: 100%
+          display: flex
+          align-items: baseline
+
+        &-mobile
+          display: block
+          color: $accent
+          padding: 8px 15px
+          font-size: 16px
+          border-radius: 19px
+          background-color: #282b30
+          margin-right: 23px
+          margin-bottom: 38px
+        &-choice
+    &__filters
+      display: none
+      position: absolute
+      top: 0
+      left: 0
+      width: 100vw
+      z-index: 20
+      background-color: #232426
+      padding: 49px 16px
+      &-mobile
+        display: flex
+        justify-content: space-between
+        margin-bottom: 31px
+      &-title
+        color: $accent
+        font-family: Roboto
+        font-size: 20px
+        font-weight: 400
+        text-transform: uppercase
+      &-close
+        font-size: 15px
+        font-weight: 700
+        padding: 6px 20px
+  .catalog__select-box
+@media (max-width:576px)
+  .catalog
+    &__figurines
+      width: 100%
+      &-pages__numbers
+
+      &-header
+        justify-content: flex-start
+      &-filters
+        flex: inherit
+        &-mobile
+          margin: 0
+        &__result
+          margin: 0
+          p
+            display: none
+        &-choice
+          display: none
+  .figurines-pages-number
+    &:nth-of-type(2)
+      display: none
+    &:nth-of-type(3)
+      display: none
+    &:nth-of-type(4)
+      display: none
+@media (max-width:420px)
+@media (max-width:375px)
+@media (max-width:320px)

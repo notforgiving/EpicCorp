@@ -359,6 +359,18 @@ if (window.location.pathname == "/") {
       var valUpper = $(".upper").val();
       $(this).val(Math.floor(valUpper));
     });
+
+    if(window.innerWidth<=800){
+      const filterBtn = document.querySelector('.catalog__figurines-filters-mobile')
+      const filterBody = document.querySelector('.catalog__filters')
+      const filterClose = filterBody.querySelector('.catalog__filters-close')
+      filterBtn.addEventListener('click',()=>{
+        filterBody.classList.toggle('showBlock')
+      })
+      filterClose.addEventListener('click',()=>{
+        filterBody.classList.toggle('showBlock')
+      })
+    }
   });
 }
 
