@@ -1,0 +1,174 @@
+.order
+  padding-bottom: 95px
+  &-container
+  &-btn
+    color: #232426
+    font-size: 16px
+    font-weight: 700
+    padding: 13px 51px
+  &-title
+    margin-bottom: 40px
+  &-form
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &-input
+    border-radius: 20px
+    background-color: #39393b
+    padding: 14px 30px
+    border: none
+    outline: none
+    width: 100%
+    margin-bottom: 13px
+    color: #fff
+    &:placeholder
+      color: #bfc5cc
+      font-size: 14px
+      font-weight: 400
+  &-sub-title
+    font-size: 20px
+    font-weight: 700
+    margin-bottom: 22px
+  &__radio-input
+    &:checked
+      position: absolute
+      left: -9999px
+      & + .order__radio-label
+        position: relative
+        padding-left: 28px
+        cursor: pointer
+        line-height: 20px
+        display: inline-block
+        &::before
+          content: ''
+          position: absolute
+          left: 0
+          top: 0
+          width: 17px
+          height: 17px
+          border-radius: 100%
+          background: #39393b
+        &::after
+          content: ''
+          width: 5px
+          height: 5px
+          background: $accent
+          position: absolute
+          top: 6px
+          left: 6px
+          border-radius: 100%
+          transition: all 0.2s ease
+          opacity: 1
+          transform: scale(1)
+    &:not(checked)
+      position: absolute
+      left: -9999px
+      & + .order__radio-label
+        position: relative
+        padding-left: 28px
+        cursor: pointer
+        line-height: 20px
+        display: inline-block
+        &::before
+          content: ''
+          position: absolute
+          left: 0
+          top: 0
+          width: 17px
+          height: 17px
+          border-radius: 100%
+          background: #39393b
+        &::after
+          content: ''
+          width: 5px
+          height: 5px
+          background: $accent
+          position: absolute
+          top: 6px
+          left: 6px
+          border-radius: 100%
+          transition: all 0.2s ease
+          opacity: 0
+          transform: scale(0)
+    &__radio-label
+  &-customer
+    &-data
+      width: 55%
+      &__main
+      &__methods
+        display: flex
+        justify-content: space-between
+        margin-top: 44px
+        &-of-delivery
+          p
+            margin-bottom: 30px
+            &:last-child
+              margin-bottom: 0
+        &-of-pays
+          p
+            margin-bottom: 30px
+            &:last-child
+              margin-bottom: 0
+      &__adress
+        margin-top: 40px
+        &-group
+          display: flex
+          flex-wrap: wrap
+          justify-content: space-between
+          align-items: center
+          .order-input
+            width: 30%
+            margin-right: 12px
+      &__personal
+        margin-top: 50px
+        margin-bottom: 23px
+  &-information-of-order
+    border-radius: 5px
+    background-color: #282b30
+    padding: 30px 29px 42px 28px
+    max-width: 370px
+    &__title
+      color: #ffffff
+      font-family: Roboto
+      font-size: 20px
+      font-weight: 700
+      margin-bottom: 55px
+      text-align: center
+      text-transform: uppercase
+    &__total
+      &-amount
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 23px
+      &-price
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 27px
+    &__desc
+      font-size: 17px
+      font-weight: 400
+      &-info
+        color: $accent
+        font-size: 25px
+        font-weight: 700
+    &__price-of-delivery
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 23px
+    &__ps
+      display: block
+      font-size: 15px
+      font-weight: 400
+      width: 100%
+      padding-bottom: 26px
+      border-bottom: 1px solid #4a4e55
+      margin-bottom: 18px
+    &__arrange-btn
+      color: #232426
+      font-size: 20px
+      font-weight: 500
+      padding: 16px 0
+      width: 100%

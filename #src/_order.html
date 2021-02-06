@@ -1,0 +1,222 @@
+<section class="order">
+  <div class="order-container container">
+    <div class="bread-crumbs">
+      <a class="bread-crumbs__link" href="/">Главная</a>
+      <a class="bread-crumbs__link" href="#">Корзина</a>
+    </div>
+    <h1 class="order-title title">Оформление товара</h1>
+    <form class="order-form" action="#">
+      <div class="order-customer-data">
+        <div class="order-customer-data__main">
+          <div class="order-sub-title">Данные покупателя</div>
+          <input
+            type="text"
+            class="order-input"
+            name="name"
+            placeholder="Имя"
+            required
+          />
+          <input
+            type="email"
+            class="order-input"
+            placeholder="E-Mail"
+            name="E-Mail"
+            required
+          />
+          <input
+            type="phone"
+            class="order-input"
+            placeholder="Телефон"
+            name="phone"
+            required
+          />
+        </div>
+        <div class="order-customer-data__methods">
+          <div class="order-customer-data__methods-of-delivery">
+            <div class="order-sub-title">Выберите способ доставки</div>
+            <p>
+              <input
+                type="radio"
+                name="delivery"
+                class="order__radio-input"
+                id="method1"
+                checked
+              /><label for="method1" class="order__radio-label"
+                >Почта России (EMS)
+              </label>
+            </p>
+            <p>
+              <input
+                type="radio"
+                name="delivery"
+                class="order__radio-input"
+                id="method2"
+              /><label for="method2" class="order__radio-label"
+                >Доставка курьером</label
+              >
+            </p>
+            <p>
+              <input
+                type="radio"
+                name="delivery"
+                class="order__radio-input"
+                id="method3"
+              /><label for="method3" class="order__radio-label">DPD</label>
+            </p>
+            <p>
+              <input
+                type="radio"
+                name="delivery"
+                class="order__radio-input"
+                id="method4"
+              /><label for="method4" class="order__radio-label">СДЭК</label>
+            </p>
+            <p>
+              <input
+                type="radio"
+                name="delivery"
+                class="order__radio-input"
+                id="method5"
+              /><label for="method5" class="order__radio-label">Курьером</label>
+            </p>
+          </div>
+          <div class="order-customer-data__methods-of-pays">
+            <div class="order-sub-title">Выберите способ оплаты</div>
+            <p>
+              <input
+                type="radio"
+                name="pays"
+                class="order__radio-input"
+                id="pay1"
+                checked
+              /><label for="pay1" class="order__radio-label">Робокасса </label>
+            </p>
+            <p>
+              <input
+                type="radio"
+                name="pays"
+                class="order__radio-input"
+                id="pay2"
+              /><label for="pay2" class="order__radio-label"> Сбербанк</label>
+            </p>
+            <p>
+              <input
+                type="radio"
+                name="pays"
+                class="order__radio-input"
+                id="pay3"
+              /><label for="pay3" class="order__radio-label"> Web Money</label>
+            </p>
+            <p>
+              <input
+                type="radio"
+                name="pays"
+                class="order__radio-input"
+                id="pay4"
+              /><label for="pay4" class="order__radio-label">
+                Яндекс. Касса</label
+              >
+            </p>
+            <p>
+              <input
+                type="radio"
+                name="pays"
+                class="order__radio-input"
+                id="pay5"
+              /><label for="pay5" class="order__radio-label">
+                Наличными курьеру</label
+              >
+            </p>
+          </div>
+        </div>
+        <div class="order-customer-data__adress">
+          <div class="order-sub-title">Доставка</div>
+          <input
+            type="text"
+            class="order-input"
+            name="sity"
+            placeholder="Город"
+            required
+          />
+          <input
+            type="text"
+            class="order-input"
+            name="street"
+            placeholder="Улица"
+            required
+          />
+          <div class="order-customer-data__adress-group">
+            <input
+              type="text"
+              class="order-input"
+              name="house"
+              placeholder="Дом"
+              required
+            />
+            <input
+              type="text"
+              class="order-input"
+              name="housing"
+              placeholder="Корпус"
+            />
+            <input
+              type="text"
+              class="order-input"
+              name="room"
+              placeholder="Квартира / офис"
+              required
+            />
+            <input
+              type="text"
+              class="order-input"
+              name="code"
+              placeholder="Индекс"
+              required
+            />
+          </div>
+          <textarea
+            type="text"
+            rows="10"
+            class="order-input"
+            name="comment"
+            placeholder="Комментарий к заказу"
+          ></textarea>
+          <div class="order-customer-data__personal">
+            <input class="inp-cbx" id="stock" type="checkbox" />
+            <label class="cbx" for="stock"
+              ><span>
+                <svg width="12px" height="10px">
+                  <use xlink:href="#check"></use></svg></span
+              ><span
+                >Я согласен(а) на обработку персональных данных</span
+              ></label
+            >
+          </div>
+          <button class="order-btn btn-main">Оформить заказ</button>
+        </div>
+      </div>
+      <div class="order-information-of-order">
+        <h6 class="order-information-of-order__title">Информация по заказу</h6>
+        <div class="order-information-of-order__total-amount">
+          <span class="order-information-of-order__desc">Товаров на: </span
+          ><span class="order-information-of-order__desc-info">10 990 Р</span>
+        </div>
+        <div class="order-information-of-order__price-of-delivery">
+          <span class="order-information-of-order__desc">Доставка: </span>
+          <span class="order-information-of-order__desc-info">500 Р</span>
+        </div>
+        <span class="order-information-of-order__ps"
+          >В зависимости от выбора способа доставки, изменяется итоговая
+          стоимость</span
+        >
+        <div class="order-information-of-order__total-price">
+          <span class="order-information-of-order__desc">Итого: </span>
+          <span class="order-information-of-order__desc-info">11 190 Р</span>
+        </div>
+        <button class="order-information-of-order__arrange-btn btn-main">
+          Оформить заказ
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
