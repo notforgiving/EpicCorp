@@ -3089,6 +3089,93 @@ input[type=range].lower::-webkit-slider-runnable-track {
   padding: 17px 0;
 }
 
+.contacts-container {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.contacts-title {
+  margin-bottom: 71px;
+}
+
+.contacts-body {
+  width: 50%;
+}
+
+.contacts-phone-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 38px;
+}
+
+.contacts-phone-body__img {
+  width: 22px;
+  margin-right: 13px;
+}
+
+.contacts-city-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 62px;
+}
+
+.contacts-city-body__img {
+  width: 28px;
+  margin-right: 13px;
+}
+
+.contacts-subtitle {
+  margin-bottom: 47px;
+}
+
+.contacts-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contacts-form__input {
+  border-radius: 20px;
+  background-color: #39393b;
+  padding: 14px 30px;
+  border: none;
+  outline: 0;
+  width: 100%;
+  margin-bottom: 13px;
+  color: #fff;
+  width: 90%;
+}
+
+.contacts-form__textarea {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.contacts-form__btn {
+  padding: 16px 0;
+  font-size: 16px;
+  width: 50%;
+}
+
+.contacts-back-img {
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+  width: 25vw;
+}
+
 .footer {
   background-color: #f5e422;
   padding: 47px 0 54px 0;
@@ -3477,6 +3564,10 @@ input[type=range].lower::-webkit-slider-runnable-track {
     height: 70%;
   }
 
+  .contacts-back-img {
+    width: 40vw;
+  }
+
   .footer__top {
     margin-bottom: 70px;
   }
@@ -3699,6 +3790,10 @@ input[type=range].lower::-webkit-slider-runnable-track {
     right: 5vw;
     z-index: -1;
     opacity: 0.3;
+  }
+
+  .contacts-container {
+    padding-bottom: 50px;
   }
 
   .footer__top {
@@ -4266,6 +4361,18 @@ input[type=range].lower::-webkit-slider-runnable-track {
     display: none;
   }
 
+  .contacts-container {
+    padding-bottom: 50px;
+  }
+
+  .contacts-body {
+    width: 80%;
+  }
+
+  .contacts-back-img {
+    display: none;
+  }
+
   .footer__top {
     margin-bottom: 30px;
   }
@@ -4568,6 +4675,14 @@ input[type=range].lower::-webkit-slider-runnable-track {
 
   .order-customer-data__methods-of-delivery {
     margin-bottom: 50px;
+  }
+
+  .contacts-container {
+    padding-bottom: 50px;
+  }
+
+  .contacts-body {
+    width: 100%;
   }
 
   .site-map__column {
