@@ -13,7 +13,7 @@
   &__cards-items
     display: flex
     flex-wrap: wrap
-    margin-bottom: 75px
+    margin-bottom: 70px
     justify-content: space-between
   &__add-cards
     display: flex
@@ -89,6 +89,35 @@
 
 .slick-initialized .slick-slide
   display: flex
+
+.main-accordion
+  width: 100%
+  text-align: center
+  padding: 50px 30px
+  background-color: #282b30
+  margin-bottom: 70px
+  position: relative
+  &__text
+    &-min
+    &-max
+      display: none
+  &__btn
+    position: absolute
+    left: 50%
+    bottom: 0
+    transform: translate(-50%, 50%)
+    background-color: $accent
+    width: 220px
+    padding: 15px 0
+    font-weight: 500
+    font-size: 16px
+    &-min
+      display: none
+    &-max
+      display: none
+    &:hover
+      background-color: #fff74b
+      cursor: pointer
 
 @media (max-width:1680px)
   .main__double-item
