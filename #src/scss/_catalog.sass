@@ -48,6 +48,7 @@
       background-color: #39393b
   &__figurines
     flex: 1
+
     &-filters
       &-mobile
         display: none
@@ -196,8 +197,12 @@
 @media (max-width:1366px)
 @media (max-width:1280px)
 @media (max-width:1024px)
-@media (max-width:960px)
-@media (max-width:800px)
+@media (max-width:970px)
+  .catalog__figurines-filters__result
+    margin-bottom: 10px
+  .catalog__figurines-filters
+    flex-wrap: wrap
+@media (max-width:850px)
   .catalog
     &__figurines
       &-header
@@ -207,11 +212,11 @@
           width: 100%
           display: flex
           align-items: baseline
-
         &-mobile
           display: block
           color: $accent
-          padding: 8px 15px
+          padding: 6px 15px
+          line-height: 26px
           font-size: 16px
           border-radius: 19px
           background-color: #282b30
@@ -220,13 +225,10 @@
         &-choice
     &__filters
       display: none
-      position: absolute
-      top: 0
-      left: 0
-      width: 100vw
-      z-index: 20
+      width: 100%
       background-color: #232426
       padding: 49px 16px
+      margin-right: 0
       &-mobile
         display: flex
         justify-content: space-between

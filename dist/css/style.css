@@ -1007,7 +1007,7 @@ button {
 .easy-basket-filter-info p {
   color: #fff;
   margin: 0;
-  width: 40px;
+  width: 55px;
   position: absolute;
   top: 0;
 }
@@ -1368,7 +1368,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
 }
 
 .information__search-input:focus {
-  width: 20vw;
+  width: 30vw;
   z-index: 1;
   border-radius: 20px;
   background-color: #39393b;
@@ -3980,6 +3980,17 @@ input[type=range].lower::-webkit-slider-runnable-track {
   }
 }
 
+@media (max-width: 970px) {
+  .catalog__figurines-filters__result {
+    margin-bottom: 10px;
+  }
+
+  .catalog__figurines-filters {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 960px) {
   .card-item-btn__buy {
     padding: 7px 19px;
@@ -4197,13 +4208,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
   }
 }
 
-@media (max-width: 840px) {
-  .cutaway__recomendation-wrapper {
-    width: 85%;
-  }
-}
-
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .catalog__figurines-filters {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -4222,7 +4227,8 @@ input[type=range].lower::-webkit-slider-runnable-track {
   .catalog__figurines-filters-mobile {
     display: block;
     color: #f5e422;
-    padding: 8px 15px;
+    padding: 6px 15px;
+    line-height: 26px;
     font-size: 16px;
     border-radius: 19px;
     background-color: #282b30;
@@ -4232,13 +4238,10 @@ input[type=range].lower::-webkit-slider-runnable-track {
 
   .catalog__filters {
     display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    z-index: 20;
+    width: 100%;
     background-color: #232426;
     padding: 49px 16px;
+    margin-right: 0;
   }
 
   .catalog__filters-mobile {
@@ -4264,7 +4267,15 @@ input[type=range].lower::-webkit-slider-runnable-track {
     font-weight: 700;
     padding: 6px 20px;
   }
+}
 
+@media (max-width: 840px) {
+  .cutaway__recomendation-wrapper {
+    width: 85%;
+  }
+}
+
+@media (max-width: 800px) {
   .order-form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4317,10 +4328,6 @@ input[type=range].lower::-webkit-slider-runnable-track {
 
   .information__link {
     display: none;
-  }
-
-  .information__search-input:focus {
-    width: 35vw;
   }
 
   .basket-btn {
