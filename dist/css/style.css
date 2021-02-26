@@ -230,11 +230,11 @@ li {
 }
 
 body {
-  font-family: Roboto, sans-serif, Arial;
+  font-family: Roboto, sans-serif, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.65;
   color: #ffffff;
-  min-width: 375px;
+  min-width: 320px;
   position: relative;
   background-color: #232426;
   background-repeat: no-repeat;
@@ -5524,5 +5524,18 @@ input[type=range].lower::-webkit-slider-runnable-track {
 
   .footer__top-img {
     display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    max-width: 320px;
+    padding: 0 0px 50px 0px;
+  }
+
+  .main__cards-items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
