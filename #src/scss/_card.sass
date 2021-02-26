@@ -204,7 +204,7 @@
       grid-template-columns: 150px 40% 2fr
 @media (max-width:1024px)
 @media (max-width:960px)
-@media (max-width:800px)
+@media (max-width:930px)
   .cutaway
     &__container
       display: grid
@@ -214,7 +214,6 @@
     &__recomendation
       width: 100%
       &-wrapper
-        width: 70vw
       &-title
         text-align: center
       &-slider__arrows
@@ -285,9 +284,16 @@
             transition: 0.2s
     &__title
       &-mobile
-@media (max-width:576px)
-@media (max-width:420px)
-@media (max-width:481px)
+@media (max-width:840px)
+  .cutaway__recomendation-wrapper
+    width: 85%
+@media (max-width:630px)
+  .cutaway__recomendation-wrapper
+    width: 70%
+@media (max-width:550px)
+  .cutaway__recomendation-wrapper
+    width: 90%
+@media (max-width:650px)
   .cutaway
     &__container
       display: grid
@@ -297,7 +303,6 @@
       .bread-crumbs
         margin-bottom: 55px
     &__recomendation
-      width: 93vw
       &-title
         margin-top: 30px
         margin-bottom: 5px
@@ -336,7 +341,7 @@
             box-shadow: none
             &:focus
               .select-box__input-text
-                border-bottom: none
+                border: none
               .select-box__icon
                 background-color: transparent
                 border: none
@@ -417,7 +422,8 @@
       &__description-btn
         display: block
       &__images
-        width: 93vw
+        width: 100vw
+        margin-right: 0
         &-slider
           margin-bottom: 47px
           .slick-dots

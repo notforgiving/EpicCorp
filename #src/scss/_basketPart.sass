@@ -94,6 +94,7 @@
       display: flex
       justify-content: space-between
       align-items: center
+      margin-bottom: 20px
       &-text
         font-size: 19px
         font-weight: 700
@@ -176,9 +177,16 @@
         &__product-name
           width: 70%
           max-width: fit-content
-          margin-right: 0
+          margin-right: 15px
         &__modile-delete
           display: block
-@media (max-width:420px)
+          margin-right: 20px
+@media (max-width:628px)
+  .basket
+    &-list
+      &-row
+        &__product
+          &-name
+            margin-right: 0
 @media (max-width:375px)
 @media (max-width:320px)

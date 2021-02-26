@@ -14,7 +14,7 @@
       '<div class="cutaway-item__images-slider__arrows"><svg class="vartical-arrow-bottom" xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><g><g><path fill="#787677" d="M.307 8.582L7.088.294a.892.892 0 0 1 .763-.325c.281-.022.57.09.762.325l6.781 8.288a.893.893 0 0 1-1.381 1.13L7.85 2.182 1.688 9.713a.892.892 0 0 1-1.381-1.13z"/></g></g></svg></div>',
     responsive: [
       {
-        breakpoint: 801,
+        breakpoint: 931,
         settings: {
           arrows: false,
           slidesToShow: 1,
@@ -24,7 +24,7 @@
         },
       },
       {
-        breakpoint: 481,
+        breakpoint: 651,
         settings: {
           arrows: false,
           slidesToShow: 1,
@@ -36,6 +36,7 @@
     ],
   });
 
+  /*Стили к каталогу товаров */
   if (window.innerWidth <= 768) {
     const descriptionBtn = document.querySelector(
       ".cutaway-item__description-btn"
@@ -150,44 +151,5 @@ closeAlert.addEventListener('click',()=>{
   alert.classList.toggle('alertShow')
 })
 
-  /* Слайдер - рекомендации*/
-  $(".cutaway__recomendation-slider").slick({
-    dots: false,
-    arrows: true,
-    slidesToShow: 4,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    slidesToScroll: 1,
-    prevArrow:
-      '<div class="cutaway__recomendation-slider__arrows cutaway__recomendation-slider__arrows-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><g><g><path fill="#787677" d="M.307 8.582L7.088.294a.892.892 0 0 1 .763-.325c.281-.022.57.09.762.325l6.781 8.288a.893.893 0 0 1-1.381 1.13L7.85 2.182 1.688 9.713a.892.892 0 0 1-1.381-1.13z"/></g></g></svg></div>',
-    nextArrow:
-      '<div class="cutaway__recomendation-slider__arrows cutaway__recomendation-slider__arrows-right"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10"><g><g><path fill="#787677" d="M.307 8.582L7.088.294a.892.892 0 0 1 .763-.325c.281-.022.57.09.762.325l6.781 8.288a.893.893 0 0 1-1.381 1.13L7.85 2.182 1.688 9.713a.892.892 0 0 1-1.381-1.13z"/></g></g></svg></div>',
-    responsive: [
-      {
-        breakpoint: 801,
-        settings: {
-          dots: false,
-          slidesToShow: 3,
-          autoplay: false,
-          autoplaySpeed: 3000,
-          slidesToScroll: 1,
-          vertical: false,
-          verticalSwiping: false,
-        },
-      },
-      {
-        breakpoint: 481,
-        settings: {
-          dots: false,
-          arrows: false,
-          slidesToShow: 2,
-          autoplay: false,
-          autoplaySpeed: 3000,
-          slidesToScroll: 1,
-          vertical: false,
-          verticalSwiping: false,
-        },
-      },
-    ],
-  });
+  
 
