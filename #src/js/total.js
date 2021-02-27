@@ -136,6 +136,21 @@ document.addEventListener("scroll", () => {
   }
 });
 
+if (document.querySelectorAll(".card-item-btn__buy")) {
+  const buyBtns = document.querySelectorAll(".card-item-btn__buy");
+  const alert = document.querySelector(".alert");
+  const closeAlert = document.querySelector(".alert__close");
+  buyBtns.forEach((item) => {
+    item.addEventListener("click", () => {
+      alert.classList.toggle("alertShow");
+    });
+  });
+
+  closeAlert.addEventListener("click", () => {
+    alert.classList.toggle("alertShow");
+  });
+}
+
 /*Аккордион главной страницы */
 if (document.querySelector(".main-accordion")) {
   const mainAccordionText = document.querySelector(".main-accordion");
