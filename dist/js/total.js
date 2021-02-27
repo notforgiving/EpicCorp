@@ -136,3 +136,27 @@ document.addEventListener('scroll',()=>{
     up.style.display = 'none'
   }
 })
+
+/*Аккордион главной страницы */
+const mainAccordionText = document.querySelector(".main-accordion");
+const mainAccordionBtn = mainAccordionText.querySelector(
+  ".main-accordion__btn"
+);
+const mainAccordionMinText = mainAccordionText.querySelector(
+  ".main-accordion__text-min"
+);
+const mainAccordionMaxText = mainAccordionText.querySelector(
+  ".main-accordion__text-max"
+);
+const mainAccordionBtnMinText = mainAccordionBtn.querySelector(
+  ".main-accordion__btn-min"
+);
+const mainAccordionBtnMaxText = mainAccordionBtn.querySelector(
+  ".main-accordion__btn-max"
+);
+mainAccordionBtn.addEventListener("click", () => {
+  mainAccordionMinText.classList.toggle("showBlock");
+  mainAccordionMaxText.classList.toggle("showBlock");
+  mainAccordionBtnMinText.classList.toggle("showBlock");
+  mainAccordionBtnMaxText.classList.toggle("showBlock");
+});

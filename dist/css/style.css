@@ -885,6 +885,9 @@ button {
   position: relative;
   width: 18px;
   height: 18px;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
   border-radius: 4px;
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
@@ -1102,7 +1105,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
   position: absolute;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: 100%;
   background-position-x: 50%;
   background-repeat: no-repeat;
   z-index: 500;
@@ -1239,7 +1242,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
       justify-content: space-around;
   position: absolute;
   top: 80vh;
-  left: 41%;
+  left: 35%;
   width: 55%;
 }
 
@@ -2260,10 +2263,6 @@ input[type=range].lower::-webkit-slider-runnable-track {
           transform: rotate(180deg);
 }
 
-.catalog {
-  padding-bottom: 157px;
-}
-
 .catalog__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2376,6 +2375,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 70px;
 }
 
 .figurines-pages__cicle {
