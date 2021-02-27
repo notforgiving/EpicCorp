@@ -2381,6 +2381,9 @@ input[type=range].lower::-webkit-slider-runnable-track {
 .figurines-pages__cicle {
   width: 45px;
   height: 45px;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
   border-radius: 50%;
   border: 1px solid #5c5c5f;
   color: #ffffff94;
@@ -3522,6 +3525,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
 
   .epic-slider__information-btn {
     padding: 23px 37px;
+    margin-bottom: 55px;
   }
 
   .main__double-item {
@@ -3621,6 +3625,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
 
   .epic-slider__information-btn {
     padding: 22px 36px;
+    margin-bottom: 50px;
   }
 
   .main__cards-items .card-btn__buy {
@@ -3712,6 +3717,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
   .epic-slider__information-btn {
     padding: 22px 35px;
     font-size: 16px;
+    margin-bottom: 40px;
   }
 
   .main__double-item {
@@ -3802,6 +3808,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
 
   .epic-slider__information-btn {
     padding: 20px 34px;
+    margin-bottom: 35px;
   }
 
   .main__double-item {
@@ -3930,6 +3937,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
   .epic-slider__information-btn {
     padding: 19px 32px;
     font-size: 14px;
+    margin-bottom: 30px;
   }
 
   .main__double-item {
@@ -4041,6 +4049,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
 
   .epic-slider__information-btn {
     padding: 18px 30px;
+    margin-bottom: 25px;
   }
 
   .main__double-item {
@@ -4519,6 +4528,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
   .epic-slider__information-btn {
     padding: 17px 27px;
     font-size: 12px;
+    margin-bottom: 15px;
   }
 
   .main__double-item {
@@ -5051,10 +5061,6 @@ input[type=range].lower::-webkit-slider-runnable-track {
     transition: 0.2s;
   }
 
-  .information__search-btn-mobile {
-    display: none;
-  }
-
   .epic-slider__numbers {
     top: 76%;
     font-size: 26px;
@@ -5074,6 +5080,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
 
   .epic-slider__information-btn {
     padding: 16px 25px;
+    margin-bottom: 10px;
   }
 
   .main__double {
@@ -5228,6 +5235,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
 
   .epic-slider__information-btn {
     padding: 15px 23px;
+    margin-bottom: 5px;
   }
 
   .main__double-item {
@@ -5310,6 +5318,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
 
   .epic-slider__information-btn {
     padding: 14px 21px;
+    margin-bottom: 0px;
   }
 
   .not-found__title {

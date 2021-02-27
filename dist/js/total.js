@@ -102,7 +102,7 @@ if (window.innerWidth <= 768) {
     if (informationBody.classList.value.includes("showFlex")) {
       informationBody.classList.toggle("showFlex");
     }
-    if(menu.classList.value.includes('showFlex')){
+    if (menu.classList.value.includes("showFlex")) {
       menu.classList.toggle("showFlex");
     }
   }); //показ второго уровня меню по клику на каталог
@@ -113,50 +113,51 @@ if (window.innerWidth <= 768) {
   }); //Показ 3 уровня меню
 }
 
-if(window.innerWidth <= 768){
-  const searchBtn = document.querySelector('.information__search-btn-mobile')
-  const mobileSearch = document.querySelector('.header__mobile-search')
-  const closeBtnSearch = mobileSearch.querySelector('.information__search-btn')
+if (window.innerWidth <= 768) {
+  const searchBtn = document.querySelector(".information__search-btn-mobile");
+  const mobileSearch = document.querySelector(".header__mobile-search");
+  const closeBtnSearch = mobileSearch.querySelector(".information__search-btn");
 
-  searchBtn.addEventListener('click',()=>{
-    mobileSearch.classList.toggle('header__mobile-search-show')
-  })
-  closeBtnSearch.addEventListener('click',()=>{
-    mobileSearch.classList.toggle('header__mobile-search-show')
-  })
+  searchBtn.addEventListener("click", () => {
+    mobileSearch.classList.toggle("header__mobile-search-show");
+  });
+  closeBtnSearch.addEventListener("click", () => {
+    mobileSearch.classList.toggle("header__mobile-search-show");
+  });
 }
 
 /*Появление кнопки на быстрый подъем наверх*/
-const up = document.querySelector('.arrow__up')
-document.addEventListener('scroll',()=>{
-  if(window.scrollY>=500){
-    up.style.display = 'flex'
+const up = document.querySelector(".arrow__up");
+document.addEventListener("scroll", () => {
+  if (window.scrollY >= 500) {
+    up.style.display = "flex";
+  } else {
+    up.style.display = "none";
   }
-  else{
-    up.style.display = 'none'
-  }
-})
+});
 
 /*Аккордион главной страницы */
-const mainAccordionText = document.querySelector(".main-accordion");
-const mainAccordionBtn = mainAccordionText.querySelector(
-  ".main-accordion__btn"
-);
-const mainAccordionMinText = mainAccordionText.querySelector(
-  ".main-accordion__text-min"
-);
-const mainAccordionMaxText = mainAccordionText.querySelector(
-  ".main-accordion__text-max"
-);
-const mainAccordionBtnMinText = mainAccordionBtn.querySelector(
-  ".main-accordion__btn-min"
-);
-const mainAccordionBtnMaxText = mainAccordionBtn.querySelector(
-  ".main-accordion__btn-max"
-);
-mainAccordionBtn.addEventListener("click", () => {
-  mainAccordionMinText.classList.toggle("showBlock");
-  mainAccordionMaxText.classList.toggle("showBlock");
-  mainAccordionBtnMinText.classList.toggle("showBlock");
-  mainAccordionBtnMaxText.classList.toggle("showBlock");
-});
+if (document.querySelector(".main-accordion")) {
+  const mainAccordionText = document.querySelector(".main-accordion");
+  const mainAccordionBtn = mainAccordionText.querySelector(
+    ".main-accordion__btn"
+  );
+  const mainAccordionMinText = mainAccordionText.querySelector(
+    ".main-accordion__text-min"
+  );
+  const mainAccordionMaxText = mainAccordionText.querySelector(
+    ".main-accordion__text-max"
+  );
+  const mainAccordionBtnMinText = mainAccordionBtn.querySelector(
+    ".main-accordion__btn-min"
+  );
+  const mainAccordionBtnMaxText = mainAccordionBtn.querySelector(
+    ".main-accordion__btn-max"
+  );
+  mainAccordionBtn.addEventListener("click", () => {
+    mainAccordionMinText.classList.toggle("showBlock");
+    mainAccordionMaxText.classList.toggle("showBlock");
+    mainAccordionBtnMinText.classList.toggle("showBlock");
+    mainAccordionBtnMaxText.classList.toggle("showBlock");
+  });
+}
