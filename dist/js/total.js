@@ -17,15 +17,10 @@ if (window.innerWidth <= 768) {
   mobileMenuContent.append(headerBottom);
 
   try {
-    burgerBtn.addEventListener(
-      "click",
-      () => {
-        setTimeout(()=>{
-          mobileMenu.style.transform = "translateX(0%)";
-        document.querySelector("html").style.overflow = "hidden";
-        },500)
-      },
-    );
+    burgerBtn.addEventListener("click", () => {
+      mobileMenu.style.transform = "translateX(0%)";
+      document.querySelector("html").style.overflow = "hidden";
+    });
     closeMenu.addEventListener("click", () => {
       mobileMenu.style.transform = "translateX(100%)";
       document.querySelector("html").style.overflow = "auto";

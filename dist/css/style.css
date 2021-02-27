@@ -5338,6 +5338,11 @@ input[type=range].lower::-webkit-slider-runnable-track {
 }
 
 @media (max-width: 375px) {
+  .container {
+    max-width: 330px;
+    padding: 0 0px 50px 0px;
+  }
+
   .alert {
     background-size: 4%;
   }
@@ -5541,11 +5546,6 @@ input[type=range].lower::-webkit-slider-runnable-track {
 }
 
 @media (max-width: 320px) {
-  .container {
-    max-width: 330px;
-    padding: 0 0px 50px 0px;
-  }
-
   .main__cards-items {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
