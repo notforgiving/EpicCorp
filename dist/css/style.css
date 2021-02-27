@@ -5011,7 +5011,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
     position: absolute;
     top: -100%;
     left: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 10;
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
