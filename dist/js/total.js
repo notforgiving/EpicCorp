@@ -23,7 +23,6 @@ if (window.innerWidth <= 768) {
         mobileMenu.style.transform = "translateX(0%)";
         document.querySelector("html").style.overflow = "hidden";
       },
-      { passive: true }
     );
     closeMenu.addEventListener("click", () => {
       mobileMenu.style.transform = "translateX(100%)";
