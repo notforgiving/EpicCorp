@@ -1639,7 +1639,6 @@ input[type=range].lower::-webkit-slider-runnable-track {
   position: absolute;
   top: 50%;
   left: 0;
-  width: 100%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -5548,6 +5547,12 @@ input[type=range].lower::-webkit-slider-runnable-track {
   }
 
   .main__cards-items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .catalog__figuries-items {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
