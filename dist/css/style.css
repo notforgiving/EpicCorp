@@ -4339,7 +4339,6 @@ input[type=range].lower::-webkit-slider-runnable-track {
     z-index: 20;
     background-color: #232426;
     padding: 49px 16px;
-    height: 100%;
   }
 
   .order-form {
