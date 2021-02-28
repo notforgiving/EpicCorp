@@ -16,7 +16,7 @@ if (window.innerWidth <= 768) {
   mobileMenuContent.append(headerMiddle);
   mobileMenuContent.append(headerBottom);
 
-  try {
+  function menuShow() {
     burgerBtn.addEventListener("click", () => {
       mobileMenu.style.transform = "translateX(0%)";
       mobileMenu.style.transition = "0.2s";
@@ -27,52 +27,50 @@ if (window.innerWidth <= 768) {
       mobileMenu.style.transition = "0s";
       document.querySelector("html").style.overflow = "auto";
     });
-
-    const catalogLink = mobileMenuContent.querySelector("#catalog-link");
-    const informationLink = mobileMenuContent.querySelector(
-      "#information-link"
-    );
-    const informationBody = mobileMenuContent.querySelector(
-      ".header__social-information"
-    );
-    const catalogBody = mobileMenuContent.querySelector("#menu-btn");
-    const funkoBtn = mobileMenuContent.querySelector("#menu-btn");
-    const informationBodyMenu = mobileMenuContent.querySelector(
-      ".header__menu"
-    );
-
-    informationLink.addEventListener("click", () => {
-      informationBody.classList.toggle("showFlex");
-
-      if (catalogBody.classList.value.includes("showFlex")) {
-        catalogBody.classList.toggle("showFlex");
-      }
-      if (funkoBtn.classList.value.includes("showFlex")) {
-        funkoBtn.classList.toggle("showFlex");
-      }
-      if (informationBodyMenu.classList.value.includes("showFlex")) {
-        informationBodyMenu.classList.toggle("showFlex");
-      }
-    }); //показ второго уровня меню по клику на информацию
-
-    catalogLink.addEventListener("click", () => {
-      catalogBody.classList.toggle("showFlex");
-      if (informationBody.classList.value.includes("showFlex")) {
-        informationBody.classList.toggle("showFlex");
-      }
-      if (informationBodyMenu.classList.value.includes("showFlex")) {
-        informationBodyMenu.classList.toggle("showFlex");
-      }
-    }); //показ второго уровня меню по клику на каталог
-
-    catalogBody.addEventListener("click", () => {
-      informationBodyMenu.classList.toggle("showFlex");
-    }); //Показ 3 уровня меню
-  } catch {
-    console.log(
-      "Возникла ошибка со скриптом мобильного меню. Приносим свои извинения за неудобства!"
-    );
   }
+
+  menuShow();
+  
+  window.addEventListener("resize", () => {
+    menuShow();
+  });
+
+  const catalogLink = mobileMenuContent.querySelector("#catalog-link");
+  const informationLink = mobileMenuContent.querySelector("#information-link");
+  const informationBody = mobileMenuContent.querySelector(
+    ".header__social-information"
+  );
+  const catalogBody = mobileMenuContent.querySelector("#menu-btn");
+  const funkoBtn = mobileMenuContent.querySelector("#menu-btn");
+  const informationBodyMenu = mobileMenuContent.querySelector(".header__menu");
+
+  informationLink.addEventListener("click", () => {
+    informationBody.classList.toggle("showFlex");
+
+    if (catalogBody.classList.value.includes("showFlex")) {
+      catalogBody.classList.toggle("showFlex");
+    }
+    if (funkoBtn.classList.value.includes("showFlex")) {
+      funkoBtn.classList.toggle("showFlex");
+    }
+    if (informationBodyMenu.classList.value.includes("showFlex")) {
+      informationBodyMenu.classList.toggle("showFlex");
+    }
+  }); //показ второго уровня меню по клику на информацию
+
+  catalogLink.addEventListener("click", () => {
+    catalogBody.classList.toggle("showFlex");
+    if (informationBody.classList.value.includes("showFlex")) {
+      informationBody.classList.toggle("showFlex");
+    }
+    if (informationBodyMenu.classList.value.includes("showFlex")) {
+      informationBodyMenu.classList.toggle("showFlex");
+    }
+  }); //показ второго уровня меню по клику на каталог
+
+  catalogBody.addEventListener("click", () => {
+    informationBodyMenu.classList.toggle("showFlex");
+  }); //Показ 3 уровня меню
 } else {
   const catalogLink = document.querySelector("#catalog-link");
   const informationLink = document.querySelector("#information-link");

@@ -4323,15 +4323,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
     font-weight: 700;
     padding: 6px 20px;
   }
-}
 
-@media (max-width: 840px) {
-  .cutaway__recomendation-wrapper {
-    width: 85%;
-  }
-}
-
-@media (max-width: 800px) {
   .catalog__filters {
     display: none;
     position: absolute;
@@ -4342,7 +4334,15 @@ input[type=range].lower::-webkit-slider-runnable-track {
     background-color: #232426;
     padding: 49px 16px;
   }
+}
 
+@media (max-width: 840px) {
+  .cutaway__recomendation-wrapper {
+    width: 85%;
+  }
+}
+
+@media (max-width: 800px) {
   .order-form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
