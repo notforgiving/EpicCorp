@@ -444,10 +444,12 @@ button {
   }
 
   5% {
+    z-index: 20;
     opacity: 1;
   }
 
   100% {
+    z-index: 20;
     opacity: 1;
   }
 }
@@ -459,10 +461,12 @@ button {
   }
 
   5% {
+    z-index: 20;
     opacity: 1;
   }
 
   100% {
+    z-index: 20;
     opacity: 1;
   }
 }
@@ -811,6 +815,7 @@ button {
   margin: 0;
   padding: 6px 15px;
   background-color: #282b30;
+  border: 1px solid transparent;
 }
 
 .select-box__list {
@@ -4990,6 +4995,10 @@ input[type=range].lower::-webkit-slider-runnable-track {
 }
 
 @media (max-width: 576px) {
+  .alert {
+    width: 92%;
+  }
+
   .card-item-btn__buy {
     padding: 7px 14px;
   }

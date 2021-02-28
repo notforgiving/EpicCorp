@@ -115,8 +115,10 @@
     z-index: 20
     opacity: 0.5
   5%
+    z-index: 20
     opacity: 1
   100%
+    z-index: 20
     opacity: 1
 
 .arrow__up
@@ -344,6 +346,7 @@
     margin: 0
     padding: 6px 15px
     background-color: #282b30
+    border: 1px solid transparent
   &__list
     position: absolute
     width: auto
@@ -598,6 +601,8 @@ input[type=range].lower::-webkit-slider-runnable-track
   .accordion-input:checked+.accordion-label+.accordion-body
     padding: 20px 0px 20px 20px
 @media (max-width:576px)
+  .alert
+    width: 92%
   .card-item-btn__buy
     padding: 7px 14px
   .card-item

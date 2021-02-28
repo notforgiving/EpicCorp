@@ -132,10 +132,20 @@ document.addEventListener("scroll", () => {
   }
 });
 
-if (document.querySelectorAll(".card-item-btn__buy")) {
+if (
+  document.querySelectorAll(".card-item-btn__buy") ||
+  document.querySelector(".cutaway-item__btn")
+) {
   const buyBtns = document.querySelectorAll(".card-item-btn__buy");
   const alert = document.querySelector(".alert");
   const closeAlert = document.querySelector(".alert__close");
+  if (document.querySelector(".cutaway-item__btn")) {
+    document
+      .querySelector(".cutaway-item__btn")
+      .addEventListener("click", () => {
+        alert.classList.toggle("alertShow");
+      });
+  }
   buyBtns.forEach((item) => {
     item.addEventListener("click", () => {
       alert.classList.toggle("alertShow");
