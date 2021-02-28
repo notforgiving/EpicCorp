@@ -76,9 +76,9 @@ if (window.innerWidth <= 768) {
   filterBtn.addEventListener("click", () => {
     filterBody.classList.add("showBlock");
     const filterHeight = filterBody.offsetHeight;
-    console.log(filterHeight);
     document.querySelector("body").style.overflow = "hidden";
     document.querySelector("body").style.height = filterHeight + "px";
+    filterBody.style.height = 100 + '%'
   });
 
   exitFilder.addEventListener("click", () => {
@@ -86,5 +86,6 @@ if (window.innerWidth <= 768) {
     document.querySelector("body").style.height = "auto";
     document.querySelector("body").style.overflow = "auto";
     document.querySelector("body").style.height = "auto";
+    filterBody.style.height = 'auto'
   });
 }
