@@ -5349,7 +5349,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
 @media (max-width: 375px) {
   .container {
     max-width: 350px;
-    padding: 0 0px 50px 0px;
+    padding: 0 5px 50px 5px;
   }
 
   .alert {
@@ -5471,6 +5471,10 @@ input[type=range].lower::-webkit-slider-runnable-track {
 
   .not-found {
     padding: 29vw 0 43vw 0;
+  }
+
+  .catalog-container {
+    padding: 0 0px 50px 0px;
   }
 
   .footer {
