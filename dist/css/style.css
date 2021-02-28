@@ -2357,6 +2357,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
 
 .catalog__filters .information__search-form {
   margin-bottom: 51px;
+  margin-right: 0;
 }
 
 .catalog__filters .information__search-input {
@@ -2364,6 +2365,10 @@ input[type=range].lower::-webkit-slider-runnable-track {
   z-index: 1;
   border-radius: 20px;
   background-color: #39393b;
+}
+
+.catalog__filters .information__search-input:focus {
+  width: 100%;
 }
 
 .catalog__figurines {
