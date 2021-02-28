@@ -240,6 +240,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  width: 100vw;
 }
 
 input,
@@ -4084,6 +4085,10 @@ input[type=range].lower::-webkit-slider-runnable-track {
     display: none;
   }
 
+  .about {
+    padding-top: 30px;
+  }
+
   .footer__top {
     margin-bottom: 40px;
   }
@@ -4566,6 +4571,10 @@ input[type=range].lower::-webkit-slider-runnable-track {
 
   .delivery-back__img {
     display: none;
+  }
+
+  .about {
+    padding-top: 0;
   }
 
   .contacts-container {
@@ -5341,7 +5350,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
 @media (max-width: 375px) {
   .container {
     max-width: 330px;
-    padding: 0 0px 50px 0px;
+    padding: 0;
   }
 
   .alert {
