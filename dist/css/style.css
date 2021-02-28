@@ -4299,6 +4299,18 @@ input[type=range].lower::-webkit-slider-runnable-track {
 }
 
 @media (max-width: 800px) {
+  .catalog__filters {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 20;
+    background-color: #232426;
+    padding: 49px 16px;
+    height: 100%;
+  }
+
   .order-form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5140,9 +5152,9 @@ input[type=range].lower::-webkit-slider-runnable-track {
   }
 
   .catalog__figurines-header {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .catalog__figurines-filters {

@@ -246,14 +246,25 @@
         font-weight: 700
         padding: 6px 20px
   .catalog__select-box
+@media (max-width: 800px)
+  .catalog__filters
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    width: 100vw
+    z-index: 20
+    background-color: #232426
+    padding: 49px 16px
+    height: 100%
+
 @media (max-width:576px)
   .catalog
     &__figurines
       width: 100%
       &-pages__numbers
-
       &-header
-        justify-content: flex-start
+        justify-content: space-between
       &-filters
         flex: inherit
         &-mobile
