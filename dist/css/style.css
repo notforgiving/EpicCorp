@@ -1145,9 +1145,6 @@ input[type=range].lower::-webkit-slider-runnable-track {
   -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1378,9 +1375,6 @@ input[type=range].lower::-webkit-slider-runnable-track {
   cursor: pointer;
   color: #fff;
   background: transparent;
-  -webkit-transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
-  -o-transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
-  transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
   position: absolute;
   top: 0;
   right: 0;
@@ -1412,6 +1406,9 @@ input[type=range].lower::-webkit-slider-runnable-track {
   z-index: 1;
   border-radius: 20px;
   background-color: #39393b;
+  -webkit-transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
+  -o-transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
+  transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
 }
 
 .information__search-btn {

@@ -19,10 +19,12 @@ if (window.innerWidth <= 768) {
   try {
     burgerBtn.addEventListener("click", () => {
       mobileMenu.style.transform = "translateX(0%)";
+      mobileMenu.style.transition = "0.2s";
       document.querySelector("html").style.overflow = "hidden";
     });
     closeMenu.addEventListener("click", () => {
       mobileMenu.style.transform = "translateX(100%)";
+      mobileMenu.style.transition = "0s";
       document.querySelector("html").style.overflow = "auto";
     });
 
