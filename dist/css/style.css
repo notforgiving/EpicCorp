@@ -179,6 +179,7 @@ h6,
 p {
   margin: 0;
   padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 }
 
 html,
@@ -1139,9 +1140,14 @@ input[type=range].lower::-webkit-slider-runnable-track {
   -webkit-transform: translateX(100%);
       -ms-transform: translateX(100%);
           transform: translateX(100%);
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
