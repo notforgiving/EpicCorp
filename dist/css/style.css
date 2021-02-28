@@ -262,6 +262,24 @@ button {
   margin: 0 auto;
 }
 
+.about-body-bg {
+  background-image: url(../img/aboutBg.webp);
+}
+
+.delivery-body-bg {
+  background-image: url(../img/deliveryBg.webp);
+}
+
+.contacts-body-bg {
+  background-image: url(../img/contacts_bg.webp);
+  background-size: contain;
+}
+
+.faq-body-bg {
+  background-image: url("../img/faq_bg.webp");
+  zoom: 1;
+}
+
 /*Ссылки с жетым нижним подчеркиванием*/
 
 .white__link {
@@ -278,9 +296,12 @@ button {
   width: 0%;
   height: 3px;
   background-color: #f5e422;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition-property: width;
+  -o-transition-property: width;
+  transition-property: width;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .white__link:hover::after {
@@ -1381,7 +1402,7 @@ input[type=range].lower::-webkit-slider-runnable-track {
 }
 
 .information__search-input:focus {
-  width: 30vw;
+  width: 400px;
   z-index: 1;
   border-radius: 20px;
   background-color: #39393b;
@@ -3602,6 +3623,10 @@ input[type=range].lower::-webkit-slider-runnable-track {
     margin-right: 55px;
   }
 
+  .information__search-input:focus {
+    width: 30vw;
+  }
+
   .epic-slider__numbers {
     top: 83%;
     left: 21.5%;
@@ -4359,6 +4384,22 @@ input[type=range].lower::-webkit-slider-runnable-track {
 
   .accordion-input:checked + .accordion-label + .accordion-body {
     padding: 20px 0px 20px 20px;
+  }
+
+  .about-body-bg {
+    background-image: none;
+  }
+
+  .delivery-body-bg {
+    background-image: none;
+  }
+
+  .contacts-body-bg {
+    background-image: none;
+  }
+
+  .faq-body-bg {
+    background-image: none;
   }
 
   .information__link {

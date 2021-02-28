@@ -66,17 +66,19 @@ jQuery(document).ready(function () {
 });
 
 /*Нажатие на кнопку фильтр каталога при ширина меньше 768 */
-if(window.innerWidth<=768){
-  const filterBtn = document.querySelector('.catalog__figurines-filters-mobile')
-  const filterBody = document.querySelector('.catalog__filters')
-  const exitFilder = document.querySelector('.catalog__filters-close')
-  
-  
-  filterBtn.addEventListener('click',()=>{
-    filterBody.classList.add('showBlock')
-  })
+if (window.innerWidth <= 768) {
+  const filterBtn = document.querySelector(
+    ".catalog__figurines-filters-mobile"
+  );
+  const filterBody = document.querySelector(".catalog__filters");
+  const exitFilder = document.querySelector(".catalog__filters-close");
 
-  exitFilder.addEventListener('click',()=>{
-    filterBody.classList.remove('showBlock')
-  })
+  filterBtn.addEventListener("click", () => {
+    filterBody.classList.add("showBlock");
+  });
+
+  exitFilder.addEventListener("click", () => {
+    filterBody.classList.remove("showBlock");
+    document.querySelector("body").style.height = "auto";
+  });
 }

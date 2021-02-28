@@ -1,3 +1,17 @@
+.about-body-bg
+  background-image: url(../img/aboutBg.webp)
+
+.delivery-body-bg
+  background-image: url(../img/deliveryBg.webp)
+
+.contacts-body-bg
+  background-image: url(../img/contacts_bg.webp)
+  background-size: contain
+
+.faq-body-bg
+  background-image: url("../img/faq_bg.webp")
+  zoom: 1
+
 /*Ссылки с жетым нижним подчеркиванием*/
 .white__link
   position: relative
@@ -11,7 +25,8 @@
     width: 0%
     height: 3px
     background-color: $accent
-    transition: 0.2s
+    transition-property: width
+    transition: 0.1s
   &:hover
     &::after
       width: 100%
@@ -600,6 +615,18 @@ input[type=range].lower::-webkit-slider-runnable-track
     margin-bottom: 27px
   .accordion-input:checked+.accordion-label+.accordion-body
     padding: 20px 0px 20px 20px
+    
+  .about-body-bg
+    background-image: none
+
+  .delivery-body-bg
+    background-image: none
+
+  .contacts-body-bg
+    background-image: none
+
+  .faq-body-bg
+    background-image: none
 @media (max-width:576px)
   .alert
     width: 92%
