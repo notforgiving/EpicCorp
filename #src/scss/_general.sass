@@ -179,7 +179,7 @@
 .card-item
   padding: 16px 21px 24px 24px
   background-color: #282b30
-  max-width: 255px
+  width: 255px
   display: flex
   flex-direction: column
   align-items: flex-start
@@ -187,6 +187,9 @@
   transition: 0.3s
   margin-bottom: 31px
   position: relative
+  a
+    &:first-child
+      display: contents
   &:nth-of-type(4n)
     margin-right: 0
   &:hover
@@ -234,6 +237,8 @@
     font-weight: 400
     line-height: 1.2
     margin-bottom: 18px
+    height: 13%
+    overflow: hidden
   &-btn-wrap
     width: 100%
   &-btn__buy
@@ -559,7 +564,7 @@ input[type=range].lower::-webkit-slider-runnable-track
   .card-item-btn__buy
     padding: 8px 29px
   .card-item
-    max-width: 240px
+    width: 240px
   .card-item__img
     img
       height: 180px
@@ -573,7 +578,7 @@ input[type=range].lower::-webkit-slider-runnable-track
   .card-item-btn__buy
     padding: 8px 26px
   .card-item
-    max-width: 230px
+    width: 230px
   .card-item__img
     img
       height: 175px
@@ -581,7 +586,7 @@ input[type=range].lower::-webkit-slider-runnable-track
   .card-item-btn__buy
     padding: 7px 24px
   .card-item
-    max-width: 220px
+    width: 220px
   .card-item__img
     img
       height: 170px
@@ -589,7 +594,7 @@ input[type=range].lower::-webkit-slider-runnable-track
   .card-item-btn__buy
     padding: 7px 22px
   .card-item
-    max-width: 210px
+    width: 210px
   .card-item__img
     img
       height: 165px
@@ -599,7 +604,7 @@ input[type=range].lower::-webkit-slider-runnable-track
   .card-item-btn__buy
     padding: 7px 19px
   .card-item
-    max-width: 200px
+    width: 200px
   .card-item__img
     img
       height: 160px
@@ -607,15 +612,17 @@ input[type=range].lower::-webkit-slider-runnable-track
   .card-item-btn__buy
     padding: 7px 16px
   .card-item
-    max-width: 190px
+    width: 190px
   .card-item__img
     img
       height: 155px
+  .card-item__name
+    height: 19%
   .bread-crumbs
     margin-bottom: 27px
   .accordion-input:checked+.accordion-label+.accordion-body
     padding: 20px 0px 20px 20px
-    
+
   .about-body-bg
     background-image: none
 
@@ -633,7 +640,7 @@ input[type=range].lower::-webkit-slider-runnable-track
   .card-item-btn__buy
     padding: 7px 14px
   .card-item
-    max-width: 180px
+    width: 180px
   .card-item__img
     img
       height: 150px
@@ -641,7 +648,7 @@ input[type=range].lower::-webkit-slider-runnable-track
   .card-item-btn__buy
     padding: 7px 12px
   .card-item
-    max-width: 173px
+    width: 173px
   .card-item__img
     img
       height: 145px
@@ -673,7 +680,6 @@ input[type=range].lower::-webkit-slider-runnable-track
     svg
       width: 20px
       height: 20px
-
   .bread-crumbs
     margin-bottom: 25px
 @media (max-width:320px)
