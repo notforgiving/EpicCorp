@@ -1,5 +1,37 @@
 @charset "UTF-8";
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  outline: none;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+
+html,
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 /* Slider */
 
 .slick-slider {
@@ -155,38 +187,6 @@
 ::selection {
   background-color: #f5e422;
   color: #232426;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-a {
-  outline: none;
-}
-
-html,
-body,
-ul,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-}
-
-html,
-body {
-  min-width: 320px;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar-button {
